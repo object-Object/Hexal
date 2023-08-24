@@ -173,12 +173,12 @@
 
 
   "hexal.entry.slipways": "质道",
-  "hexal.page.slipways": "我曾听说过某些晶洞中有形如泛着光的传送门的东西，它们被称作“质道”。这些质道通常“被莹莹光点围绕”，和我所知的$(l:hexal:patterns/spells/wisps)$(thing)咒灵/$十分相似。也许它们之间的联系值得研究。",
+  "hexal.page.slipways": "我曾听说过某些晶洞中有形如泛着光的传送门的东西，它们被称作“质道”。这些质道通常“被莹莹光点围绕”，和我所知的$(l:patterns/spells/wisps)$(thing)咒灵/$十分相似。也许它们之间的联系值得研究。",
 
   "hexal.entry.relay": "继链器",
-  "hexal.page.relay.0": "我常希望有方法能$(l:hexal:patterns/spells/links#hexal:link)$(action)连接/$多个$(l:hexal:patterns/spells/wisps)$(thing)咒灵/$，以便远距共享媒质和信息。然而用咒灵远距中继相当不方便，常态消耗也很大。为解决这些问题，我制造出了继链器。它们是固态方块而非媒质构造体，也因此在维持链接时不会有常态消耗。",
+  "hexal.page.relay.0": "我常希望有方法能$(l:patterns/spells/links#hexal:link)$(action)连接/$多个$(l:patterns/spells/wisps)$(thing)咒灵/$，以便远距共享媒质和信息。然而用咒灵远距中继相当不方便，常态消耗也很大。为解决这些问题，我制造出了继链器。它们是固态方块而非媒质构造体，也因此在维持链接时不会有常态消耗。",
   "hexal.page.relay.1": "相互连接的继链器会形成网络，与之连接的咒灵会共享媒质，类似于咒灵间直接相连。此外，传给网络内任一继链器的 iota 会发送给连接至网络的所有非继链器事物。继链器的工作范围是 32 格（也即两个继链器可链接的最远距离为 64 格）。手持染色剂右击任一继链器即可改变网络链接的颜色。",
-  "hexal.page.relay.2": "继链器没有所有者，若要我的咒灵和其$(l:hexal:patterns/spells/wisps#hexal:wisp/transfer/allow)$(action)transfer media/$，则必须先允许咒灵这么做。",
+  "hexal.page.relay.2": "继链器没有所有者，若要我的咒灵和其$(l:patterns/spells/wisps#hexal:wisp/transfer/allow)$(action)transfer media/$，则必须先允许咒灵这么做。",
 
   "hexal.entry.hexal_basics": "咒法拓展：基础图案",
   "hexal.page.hexal_basics.current_tick": "返回一个数，这个数似乎与自然记录时间的方式有关。如果先绘制一遍此图案，在 1 秒后再绘制一遍，返回的数会增加 20。",
@@ -221,7 +221,7 @@
   "hexal.page.wisps.wisp/move/target/get": "返回循环式咒灵自身当前目标位置的位置向量。",
   "hexal.page.wisps.wisp/move/speed/set": "移除栈顶数，并将循环式咒灵自身的速度上限设为该数。",
   "hexal.page.wisps.wisp/move/speed/get": "返回循环式咒灵自身当前速度上限。",
-  "hexal.page.wisps.wisp/transfer/allow": "当两咒灵$(l:hexal:patterns/spells/links)$(thing)连接/$时，它们会相互转送媒质，直至两者平衡。默认状况下，仅所有者相同的咒灵会自发转送。此操作接受一个编号数，并显式允许咒灵与该编号链接另一端的事物交换媒质。",
+  "hexal.page.wisps.wisp/transfer/allow": "当两咒灵$(l:patterns/spells/links)$(thing)连接/$时，它们会相互转送媒质，直至两者平衡。默认状况下，仅所有者相同的咒灵会自发转送。此操作接受一个编号数，并显式允许咒灵与该编号链接另一端的事物交换媒质。",
   "hexal.page.wisps.wisp/transfer/disallow": "相应地，此操作接受一个编号数，并禁止咒灵与该编号链接另一端的事物交换媒质。",
   "hexal.page.wisps.wisp/transfer/others/disallow": "接受一个咒灵实体（所有者需是我）和一个编号数，并允许该咒灵与该编号链接另一端的事物交换媒质。",
   "hexal.page.wisps.wisp/transfer/others/allow": "接受一个咒灵实体（所有者需是我）和一个编号数，并禁止该咒灵与该编号链接另一端的事物交换媒质。",
@@ -229,12 +229,12 @@
   "hexal.page.wisps.zone_entity/wisp": "从栈顶获取位置及最大距离，返回该位置给定距离范围内所有咒灵的列表。",
   "hexal.page.wisps.zone_entity/not_wisp": "从栈顶获取位置及最大距离，返回该位置给定距离范围内所有非咒灵实体的列表。",
   "hexal.page.wisps.wisp/trigger/tick": "移除栈顶数，然后将咒灵下一次施法时刻延迟所给数个 1/20 秒。所有可用于延迟咒灵施法的操作均能使咒灵的常态消耗减半，直到下一次施法为止。",
-  "hexal.page.wisps.wisp/trigger/comm": "咒灵将在其收到至少一次$(l:hexal:patterns/spells/links#hexal:link/comm/send)$(action)通信/$后才进行下一次施法。",
-  "hexal.page.wisps.wisp/trigger/move": "咒灵将在其抵达被$(l:hexal:patterns/spells/wisps#hexal:wisp/move/target/set)$(action)导向/$的位置后才进行下一次施法。",
+  "hexal.page.wisps.wisp/trigger/comm": "咒灵将在其收到至少一次$(l:patterns/spells/links#hexal:link/comm/send)$(action)通信/$后才进行下一次施法。",
+  "hexal.page.wisps.wisp/trigger/move": "咒灵将在其抵达被$(l:patterns/spells/wisps#hexal:wisp/move/target/set)$(action)导向/$的位置后才进行下一次施法。",
 
   "hexal.entry.links": "链接",
-  "hexal.page.links.0": "这些图案大致构建了一套能在$(l:hexal:patterns/spells/wisps)$(thing)咒灵/$间以及咒灵和其他事物间传递信息的系统。有若干图案与创建链接有关，也有些图案和通过链接发送和接收 iota 的方式相关。一个咒灵能同时维持任意数目的链接，每条每 1/20 秒常态消耗极少量媒质。",
-  "hexal.page.links.1": "可链接事物会以创建顺序为这些链接编号，此编号可用作图案的参数。介绍中的“可链接事物”不是具体参数类型，而是指代所有可被转换为可链接事物的类型。（例如，Entity -> Linkable entities，Vec -> Linkable blocks等等。）链接仅会在两可链接事物影响范围之和的两倍内起效。若要跨更远的距离连接两者，应该转而使用$(l:hexal:items/relay)$(item)继链器/$。",
+  "hexal.page.links.0": "这些图案大致构建了一套能在$(l:patterns/spells/wisps)$(thing)咒灵/$间以及咒灵和其他事物间传递信息的系统。有若干图案与创建链接有关，也有些图案和通过链接发送和接收 iota 的方式相关。一个咒灵能同时维持任意数目的链接，每条每 1/20 秒常态消耗极少量媒质。",
+  "hexal.page.links.1": "可链接事物会以创建顺序为这些链接编号，此编号可用作图案的参数。介绍中的“可链接事物”不是具体参数类型，而是指代所有可被转换为可链接事物的类型。（例如，Entity -> Linkable entities，Vec -> Linkable blocks等等。）链接仅会在两可链接事物影响范围之和的两倍内起效。若要跨更远的距离连接两者，应该转而使用$(l:items/relay)$(item)继链器/$。",
   "hexal.page.links.link": "将施法者链接至栈顶实体，且实体必须为可链接的。消耗 1 个$(l:items/amethyst)$(item)紫水晶碎片/$。",
   "hexal.page.links.link/others": "可在任意施法器件上运行。将两个实体链接，且两实体必须均为可链接的。消耗 1 个$(l:items/amethyst)$(item)紫水晶碎片/$。",
   "hexal.page.links.link/unlink": "断开施法者的编号为所给数的链接。消耗 2 个$(l:items/amethyst)$(item)紫水晶粉/$。",
@@ -246,8 +246,8 @@
   "hexal.page.links.link/comm/read": "当接收到 iota 时其将被加至一个队列中。此图案会将该队列中的首个 iota 压入栈顶并移出队列。",
   "hexal.page.links.link/comm/num": "返回接收队列中未读 iota 的个数。",
   "hexal.page.links.link/comm/clear": "移除施法者接收队列中所有未读 iota。",
-  "hexal.page.links.link/comm/open_transmit": "与$(l:patterns/patterns_as_iotas#hexcasting:open_paren)$(action)内省/$类似。在绘制$(l:hexal:patterns/spells/links#hexal:link/comm/close_transmit)$(action)结束发信/$后，所有我绘制的图案会通过编号为栈顶数的链接发送出去。",
-  "hexal.page.links.link/comm/close_transmit": "在$(l:hexal:patterns/spells/links#hexal:link/comm/open_transmit)$(action)开始发信/$之后绘制，意味着发信过程结束。如果$(l:hexal:patterns/spells/links#hexal:link/comm/open_transmit)$(action)开始发信/$或$(l:hexal:patterns/spells/links#hexal:link/comm/close_transmit)$(action)结束发信/$是由中介施法者（如咒灵）运行的话，则会产生事故。",
+  "hexal.page.links.link/comm/open_transmit": "与$(l:patterns/patterns_as_iotas#hexcasting:open_paren)$(action)内省/$类似。在绘制$(l:patterns/spells/links#hexal:link/comm/close_transmit)$(action)结束发信/$后，所有我绘制的图案会通过编号为栈顶数的链接发送出去。",
+  "hexal.page.links.link/comm/close_transmit": "在$(l:patterns/spells/links#hexal:link/comm/open_transmit)$(action)开始发信/$之后绘制，意味着发信过程结束。如果$(l:patterns/spells/links#hexal:link/comm/open_transmit)$(action)开始发信/$或$(l:patterns/spells/links#hexal:link/comm/close_transmit)$(action)结束发信/$是由中介施法者（如咒灵）运行的话，则会产生事故。",
 
   "hexal.entry.tick": "加速",
   "hexal.page.tick.tick.0": "在法术运行的那一刻，加速所给位置处方块的运作。",
@@ -259,7 +259,7 @@
   "hexal.page.gates.2": "未锚定门径没有与任何事物绑定，可用于将实体送至任意位置。但其效率也会相应降低，只能将实体送至我所能影响的范围内的位置。门径烧入成功后，我的栈上便会出现一个代表其的 iota。我能以此 iota 标记实体，如此当我关闭门径时，所有被标记的实体就会被传送至门径终点。需注意关闭门径不会将其消耗，获得门径 iota 后便能永久使用。",
   "hexal.page.gates.gate/make": "压入一个新的门径。所有此 iota 的复制品都指向同一个门径。消耗 32 个$(l:items/amethyst)$(item)充能紫水晶/$。若传入 Null，则构造未锚定门径；若传入一个向量，则构造位置锚定门径；若传入一个向量和一个实体，则构造实体锚定门径。",
   "hexal.page.gates.gate/mark": "移除栈顶实体与门径，并标记该实体，被标记的实体会在对应门径关闭时被传送。消耗 1/20 个$(l:items/amethyst)$(item)紫水晶粉/$。",
-  "hexal.page.gates.gate/unmark": "移除栈顶门径与实体，并取消该实体的标记。若其已被$(l:hexal:patterns/spells/gates#hexal:gate/mark)$(action)开启门径/$标记，下一次门径关闭时其将不会被传送。",
+  "hexal.page.gates.gate/unmark": "移除栈顶门径与实体，并取消该实体的标记。若其已被$(l:patterns/great_spells/gates#hexal:gate/mark)$(action)开启门径/$标记，下一次门径关闭时其将不会被传送。",
   "hexal.page.gates.gate/mark/num/get": "移除栈顶门径，返回被该门径标记的实体的数量。",
   "hexal.page.gates.gate/mark/get": "移除栈顶门径和实体，判断该实体是否被该门径标记。",
   "hexal.page.gates.gate/close": "移除栈顶锚定门径，或未锚定门径与位置向量。将所有被所给门径标记的实体传送至其锚定位置或所给位置。消耗 1/2 个$(l:items/amethyst)$(item)紫水晶碎片/$。若为未锚定门径，则每个实体每传送 1 格额外消耗 1 个$(l:items/amethyst)$(item)紫水晶粉/$。",
@@ -302,7 +302,7 @@
   "hexal.entry.types": "类型",
   "hexal.page.types.type/iota": "移除栈顶元素，并返回该 iota 的类型。",
   "hexal.page.types.type/entity": "移除栈顶实体，并返回该实体的类型。",
-  "hexal.page.types.type/block_item": "移除栈顶位置向量，$(l:hexal:hexal.entry.motes)$(item)物元/$，物品实体或物品展示框。并返回该处方块的类型或对应物品类型。（如草方块、石头、木棍等。）",
+  "hexal.page.types.type/block_item": "移除栈顶位置向量，$(l:hexal.entry.motes)$(item)物元/$，物品实体或物品展示框。并返回该处方块的类型或对应物品类型。（如草方块、石头、木棍等。）",
   "hexal.page.types.type/item_held": "若施法者副手中有物品，则将其类型压入栈顶；若无，则压入施法用手中物品的类型。",
 
   "hexal.page.types.get_entity/type": "从栈顶获取实体类型和位置向量，返回该位置符合该类型的实体（若有）。",
@@ -319,7 +319,7 @@
   "hexal.page.everbook.everbook/toggle_macro.1": "当绘制被标记的永恒之书条目所对应的图案时，如果对应条目存有一个列表，则自然会如同$(l:patterns/meta#hexcasting:eval)$(action)赫尔墨斯之策略/$一样依次执行列表中各元素，但不会消耗递归层数。试图将不存在的条目或是会无限递归的条目标记为图案则会失败。",
 
   "hexal.entry.everbook_entries": "永恒之书条目",
-  "hexal.page.everbook_entries.0": "此条目中每一页都会显示我$(l:hexal:patterns/everbook)$(action)永恒之书/$中某一条目对应的图案密钥。",
+  "hexal.page.everbook_entries.0": "此条目中每一页都会显示我$(l:patterns/everbook)$(action)永恒之书/$中某一条目对应的图案密钥。",
 
   "hexal.everbook_pattern_entry.header": "存储密钥：%d",
   "hexal.everbook_pattern_entry.macro_header": "宏密钥：%d",
