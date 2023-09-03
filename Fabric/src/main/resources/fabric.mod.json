@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "hexal",
+  "version": "${version}",
+
+  "name": "Hexal",
+  "description": "Extension mod for Hex Casting to add new patterns (and whatever else I feel like).",
+  "authors": [
+    "Talia"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/hexal",
+    "sources": "https://github.com/Talia-12/Hexal"
+  },
+
+  "license": "MIT",
+  "icon": "logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {"adapter": "kotlin", "value": "ram.talia.hexal.fabric.FabricHexalInitializer"}
+    ],
+    "client": [
+      {"adapter": "kotlin", "value": "ram.talia.hexal.fabric.FabricHexalClientInitializer"}
+    ],
+    "fabric-datagen": [
+      "ram.talia.hexal.fabric.datagen.HexalFabricDataGenerators"
+    ],
+    "cardinal-components": [
+      "ram.talia.hexal.fabric.cc.HexalCardinalComponents"
+    ],
+    "rei_client": [
+      "ram.talia.hexal.fabric.interop.rei.HexalREIPlugin"
+    ],
+    "emi": [
+      "ram.talia.hexal.fabric.interop.emi.HexalEMIPlugin"
+    ],
+    "modmenu": [
+      "ram.talia.hexal.fabric.interop.ModMenuInterop"
+    ]
+  },
+  "mixins": [
+    "hexalplat.mixins.json",
+    "hexal.mixins.json"
+  ],
+  "accessWidener": "hexal.accesswidener",
+
+  "depends": {
+    "minecraft": "=1.19.2",
+    "java": ">=17",
+    "fabricloader": ">=0.14",
+    "fabric": ">=0.64",
+    "fabric-language-kotlin": ">=1.7.4+kotlin.1.6.21",
+    "cardinal-components": ">=5.0.2",
+    "patchouli": ">=1.19.2-77",
+    "paucal": "0.5.x",
+    "hexcasting": "=0.10.3",
+    "geckolib3": ">=3.1.40"
+  },
+  "suggests": {
+    "gravitychanger": "0.7.21+fabric",
+    "pehkui": "3.6.0+1.14.4-1.19"
+  },
+
+  "custom": {
+    "cardinal-components": [
+      "hexal:wisp_casting_manager",
+      "hexal:player_linkstore",
+      "hexal:everbook",
+      "hexal:bound_storage"
+    ]
+  }
+}
