@@ -1,0 +1,66 @@
+modid = "hexal"
+book = "hexal:hexalbook"
+fallback_url = "https://talia-12.github.io/Hexal"
+default_lang = "en_us"
+
+_export_root = "../../doc/src/hexdoc_hexal/_export"
+resource_dirs = [  # top takes priority
+    { path = "{^_export_root}/resources", reexport = false },
+    "{_common.src}/main/resources",
+    "{_common.src}/generated/resources",
+    "{_fabric.src}/main/resources",
+    "{_fabric.src}/generated/resources",
+    "{_forge.src}/main/resources",
+    "{_forge.src}/generated/resources",
+    { modid = "hexcasting" },
+]
+export_dir = "{_export_root}/generated"
+
+
+# NOTE: "!Raw" means "don't apply variable interpolation to this value"
+_pattern_regex = { "!Raw" = '(?s-m:HexPattern\.fromAngles\("(?P<signature>[qweasd]+)", HexDir\.(?P<startdir>\w+)\),\s*modLoc\("(?P<name>[^"]+)"\),[^,]+?(?:makeConstantOp|Op\w+).*?(?P<is_per_world>\btrue)?\)(?:[^\)]+?\bval\b|(?:(?!\bval\b)(?:.))+$))' }
+
+
+[[pattern_stubs]]
+path = "{^_common.package}/common/casting/Patterns.kt"
+regex = "{^_pattern_regex}"
+
+[[pattern_stubs]]
+path = "{^_fabric.package}/FabricHexalInitializer.kt"
+regex = "{^_pattern_regex}"
+
+
+[base_asset_urls]
+hexcasting = "https://raw.githubusercontent.com/gamma-delta/HexMod/main/Common/src/main/resources"
+
+
+[template]
+main = "main.html.jinja"
+static_dir = "static"
+packages = [
+    "hexdoc_hexal",
+    "hexdoc",
+]
+
+[template.args]
+title = "Hexal Book"
+mod_name = "Hexal"
+author = "Talia-12"
+description = "The Hexal Book, all in one place."
+icon_href = "icon.png"
+show_landing_text = false
+
+
+# platforms
+
+[_common]
+src = "../Common/src"
+package = "{src}/main/java/ram/talia/hexal"
+
+[_fabric]
+src = "../Fabric/src"
+package = "{src}/main/java/ram/talia/hexal/fabric"
+
+[_forge]
+src = "../Forge/src"
+package = "{src}/main/java/ram/talia/hexal/forge"
