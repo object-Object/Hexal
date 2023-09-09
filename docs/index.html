@@ -105,6 +105,33 @@
       .dropdown-menu .divider {
         margin: 4px 0;
       }
+      .nobr {
+        white-space: nowrap;
+      }
+      .hidden {
+        display: none;
+        visibility: hidden;
+      }
+      @media (min-width: 40rem) {
+        .book-body {
+          width: 70%;
+          left: 5%;
+          position: relative;
+          float: left;
+        }
+        .toc-container {
+          position: sticky;
+          top: 0;
+          width: 25%;
+          float: left;
+          max-height: 80vh;
+          overflow-y: scroll;
+        }
+        .toc-permalink {
+          display: none;
+          visibility: hidden;
+        }
+      }
       @media (prefers-color-scheme: dark) {
         body {
           background-color: #201a20;
@@ -491,16 +518,10 @@
       // Fills the version dropdown menus and the "old version" message.
       function addDropdowns(sitemap) {
         let [branches, versions] = sortSitemapVersions(sitemap);
-        // set the "old version" message if this page is a version number, but not the latest one
+        // reveal the "old version" message if this page is a version number, but not the latest one
         // this isn't a dropdown, but it's here since we have the data anyway
         if (versions.slice(1).includes(VERSION)) {
-          // thanks for the idea petra
-          let oldVersionNotice = document.createElement("i");
-          oldVersionNotice.textContent = "The past is a foreign country; they do things differently there.";
-          document.getElementById("old-version-notice").append(
-            document.createElement("br"),
-            oldVersionNotice,
-          );
+          document.getElementById("old-version-notice").classList.remove("hidden")
         }
         // versions
         document.getElementById("version-dropdown").append(
@@ -594,68 +615,72 @@
       <b>Entries which are blurred are spoilers</b>. Click to reveal them, but be aware that they may spoil endgame
       progression. Alternatively, click <a href="?nospoiler">here</a> to get a version with all spoilers showing.
     </p>
-      <div id="old-version-notice"></div>
+    <span id="old-version-notice" class="hidden">
+      <br />
+      <i>The past is a foreign country; they do things differently there.</i>
+    </span>
   </blockquote>
 </div>
 <div class="container">
-  <nav>
-<h2 id="table-of-contents" class="page-header">
-  Table of Contents<a
-    href="javascript:void(0)"
-    class="permalink toggle-link small"
-    data-target="toc-category"
-    title="Toggle all"
-  ><i class="bi bi-list-nested"></i></a><a
+<div id="table-of-contents"></div>
+<nav class="toc-container">
+  <h2 class="page-header">
+    Table of <span class="nobr">Contents<a
+      href="javascript:void(0)"
+      class="permalink toggle-link small"
+      data-target="toc-category"
+      title="Toggle all"
+    ><i class="bi bi-list-nested"></i></a><a
     href="#table-of-contents"
-    class="permalink small"
+    class="permalink small toc-permalink"
     title="Permalink"
-  ><i class="bi bi-link-45deg"></i></a>
-</h2>
-  <details class="toc-category">
-    <summary><a href="#basics">Getting Started</a></summary>
-    <ul>
-        <li><a href="#basics/slipways">Slipways</a></li>
-    </ul>
-  </details>
-  <details class="toc-category">
-    <summary><a href="#items">Items</a></summary>
-    <ul>
-        <li><a href="#items/relay">Relay</a></li>
-    </ul>
-  </details>
-  <details class="toc-category">
-    <summary><a href="#interop">Cross-Mod Compatibility</a></summary>
-    <ul>
-        <li><a href="#interop/fabric_only_hexal">Fabric-Only Hexal Spells</a></li>
-    </ul>
-  </details>
-  <details class="toc-category">
-    <summary><a href="#patterns">Patterns</a></summary>
-    <ul>
-        <li><a href="#patterns/hexal_basics">Hexal Basic Patterns</a></li>
-        <li><a href="#patterns/hexal_maths">Hexal Maths</a></li>
-        <li><a href="#patterns/everbook" class="spoilered">Everbook</a></li>
-        <li><a href="#patterns/everbook_entries" class="spoilered">Everbook Entries</a></li>
-    </ul>
-  </details>
-  <details class="toc-category">
-    <summary><a href="#patterns/spells">Spells</a></summary>
-    <ul>
-        <li><a href="#patterns/spells/hexal_spells">Hexal Spells</a></li>
-        <li><a href="#patterns/spells/wisps">Wisps</a></li>
-        <li><a href="#patterns/spells/links">Links</a></li>
-        <li><a href="#patterns/spells/motes" class="spoilered">Motes</a></li>
-    </ul>
-  </details>
-  <details class="toc-category">
-    <summary><a href="#patterns/great_spells">Great Spells</a></summary>
-    <ul>
-        <li><a href="#patterns/great_spells/tick">Accelerate</a></li>
-        <li><a href="#patterns/great_spells/great_wisps">Great Wisp Spells</a></li>
-        <li><a href="#patterns/great_spells/gates">Gates</a></li>
-    </ul>
-  </details>
-  </nav>
+  ><i class="bi bi-link-45deg"></i></a></span>
+  </h2>
+    <details class="toc-category">
+      <summary><a href="#basics">Getting Started</a></summary>
+      <ul>
+          <li><a href="#basics/slipways">Slipways</a></li>
+      </ul>
+    </details>
+    <details class="toc-category">
+      <summary><a href="#items">Items</a></summary>
+      <ul>
+          <li><a href="#items/relay">Relay</a></li>
+      </ul>
+    </details>
+    <details class="toc-category">
+      <summary><a href="#interop">Cross-Mod Compatibility</a></summary>
+      <ul>
+          <li><a href="#interop/fabric_only_hexal">Fabric-Only Hexal Spells</a></li>
+      </ul>
+    </details>
+    <details class="toc-category">
+      <summary><a href="#patterns">Patterns</a></summary>
+      <ul>
+          <li><a href="#patterns/hexal_basics">Hexal Basic Patterns</a></li>
+          <li><a href="#patterns/hexal_maths">Hexal Maths</a></li>
+          <li><a href="#patterns/everbook" class="spoilered">Everbook</a></li>
+          <li><a href="#patterns/everbook_entries" class="spoilered">Everbook Entries</a></li>
+      </ul>
+    </details>
+    <details class="toc-category">
+      <summary><a href="#patterns/spells">Spells</a></summary>
+      <ul>
+          <li><a href="#patterns/spells/hexal_spells">Hexal Spells</a></li>
+          <li><a href="#patterns/spells/wisps">Wisps</a></li>
+          <li><a href="#patterns/spells/links">Links</a></li>
+          <li><a href="#patterns/spells/motes" class="spoilered">Motes</a></li>
+      </ul>
+    </details>
+    <details class="toc-category">
+      <summary><a href="#patterns/great_spells">Great Spells</a></summary>
+      <ul>
+          <li><a href="#patterns/great_spells/tick">Accelerate</a></li>
+          <li><a href="#patterns/great_spells/great_wisps">Great Wisp Spells</a></li>
+          <li><a href="#patterns/great_spells/gates">Gates</a></li>
+      </ul>
+    </details>
+</nav>
   <main class="book-body">
 <section id="basics">
     <h2 class="category-title page-header">Getting Started<a
