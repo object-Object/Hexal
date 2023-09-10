@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hexal Book</title>
+    <title>hexdoc.hexal.title</title>
     <link rel="icon" href="icon.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="The Hexal Book, all in one place." />
+    <meta name="description" content="hexdoc.hexal.description" />
     <meta name="author" content="Talia-12" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hexal Book" />
+    <meta property="og:title" content="hexdoc.hexal.title" />
     <meta property="og:image" content="https://object-object.github.io/Hexal/v/0.2.18/zh_cn/icon.png" />
     <meta property="og:url" content="https://object-object.github.io/Hexal/v/0.2.18/zh_cn" />
-    <meta property="og:description" content="The Hexal Book, all in one place." />
+    <meta property="og:description" content="hexdoc.hexal.description" />
     <meta property="og:site_name" content="Hexal" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
       integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -44,10 +44,10 @@
         margin-bottom: 0.5em;
       }
       details .collapse-spell::before {
-        content: "Click to show spell";
+        content: "点击以显示图案";
       }
       details[open] .collapse-spell::before {
-        content: "Click to hide spell";
+        content: "点击以隐藏图案";
       }
       blockquote.crafting-info {
         font-size: inherit;
@@ -180,8 +180,7 @@
           /* hack */
           --dark-mode: 1;
         }
-      }
-    </style>
+      }    </style>
     <noscript>
       <style>
         /* for accessibility */
@@ -383,7 +382,9 @@
             })`;
             context.font = `${pauseScale}px sans-serif`;
             context.fillText(
-              speedScale() ? speedScale() + "x" : "Paused",
+              // these variables are filled by Jinja
+              // slightly scuffed, but it works for now
+              speedScale() ? `${speedScale()}x` : "暂停",
               0.2 * scale,
               canvas.height - 0.2 * scale
             );
@@ -574,7 +575,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://object-object.github.io/Hexal">Hexal Book</a>
+      <a class="navbar-brand" href="https://object-object.github.io/Hexal">hexdoc.hexal.title</a>
     </div>
     <!-- content -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -607,17 +608,12 @@
 </nav>
 <div class="container" style="margin-top: 3em;">
   <blockquote>
-    <h1>This is the online version of the Hexal documentation.</h1>
-    <p>
-      Embedded images and patterns are included, but not crafting recipes or items. There's an in-game book for those.
-    </p>
-    <p>
-      <b>Entries which are blurred are spoilers</b>. Click to reveal them, but be aware that they may spoil endgame
-      progression. Alternatively, click <a href="?nospoiler">here</a> to get a version with all spoilers showing.
-    </p>
+    <h1><p>这是Hexal文档的在线版本。</p></h1>
+    <p><p>此版本会显示文档内嵌的图片和图案，合成配方和物品则不会。缺失的内容请查阅游戏内手册。</p></p>
+    <p><p><strong>条目的模糊处理相当于剧透警告</strong>。点击可取消模糊，不过这么做有可能破坏游戏后期的进程与体验。也可点击<a href='?nospoiler'>此处</a>以取消所有模糊。</p></p>
     <span id="old-version-notice" class="hidden">
       <br />
-      <i>The past is a foreign country; they do things differently there.</i>
+      <p><i>往事犹若异乡；他们在那里做的事情都不一样。</i></p>
     </span>
   </blockquote>
 </div>
@@ -625,11 +621,11 @@
 <div id="table-of-contents"></div>
 <nav class="toc-container">
   <h2 class="page-header">
-    Table of <span class="nobr">Contents<a
+    <span class="nobr">目录<a
       href="javascript:void(0)"
       class="permalink toggle-link small"
       data-target="toc-category"
-      title="Toggle all"
+      title="显示或收起全部"
     ><i class="bi bi-list-nested"></i></a><a
     href="#table-of-contents"
     class="permalink small toc-permalink"
@@ -734,7 +730,7 @@
     <p>相互连接的继链器会形成网络，与之连接的咒灵会共享媒质，类似于咒灵间直接相连。此外，传给网络内任一继链器的 iota 会发送给连接至网络的所有非继链器事物。继链器的工作范围是 32 格（也即两个继链器可链接的最远距离为 64 格）。手持染色剂右击任一继链器即可改变网络链接的颜色。</p>
 <br />
   <blockquote class="crafting-info">
-    Depicted in the book: The crafting recipe for the <code>继链器</code>.
+    书中显示如下事物的合成配方： <code>继链器</code>.
   </blockquote>
       <p>继链器没有所有者，若要我的咒灵和其<a href='#patterns/spells/wisps@hexal:wisp/transfer/allow'><span style='color: #fc77be'>transfer media</span></a>，则必须先允许咒灵这么做。</p>
 <br />
@@ -776,7 +772,7 @@
         data-string="daqqqa"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: daqqqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：daqqqa</canvas>
   </details>
       <p>接受一个位置向量和一个数，并使所给位置上方块的体积消失所给数秒。消耗 1/1000 与消失时间的平方的乘积个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -819,7 +815,7 @@
         data-string="ddwaa"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: ddwaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：ddwaa</canvas>
   </details>
       <p>返回一个数，这个数似乎与自然记录时间的方式有关。如果先绘制一遍此图案，在 1 秒后再绘制一遍，返回的数会增加 20。</p>
   </div>
@@ -839,7 +835,7 @@
         data-string="qqaed"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqaed</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqaed</canvas>
   </details>
       <p>将咒术在结束前还能运行图案的次数压入栈顶。结果会因<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>赫尔墨斯之策略</span></a>和<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:for_each'><span style='color: #fc77be'>托特之策略</span></a>而减少。</p>
   </div>
@@ -859,7 +855,7 @@
         data-string="aqawdwaqawd"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqawdwaqawd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqawdwaqawd</canvas>
   </details>
       <p>移除栈顶实体，并返回其剩余氧气值（也即距其溺水还有多少氧气值可消耗）。</p>
   </div>
@@ -879,7 +875,7 @@
         data-string="aqwawqa"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqwawqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqwawqa</canvas>
   </details>
       <p>移除栈顶实体，并返回其剩余生命值（也即距其死亡还有多少生命值可损失）。</p>
   </div>
@@ -899,7 +895,7 @@
         data-string="wqqqqw"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wqqqqw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wqqqqw</canvas>
   </details>
       <p>移除栈顶实体，并返回其护甲值。</p>
   </div>
@@ -919,7 +915,7 @@
         data-string="aeqqqqea"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aeqqqqea</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aeqqqqea</canvas>
   </details>
       <p>移除栈顶实体，并返回其盔甲韧性（盔甲的另一属性）。</p>
   </div>
@@ -939,7 +935,7 @@
         data-string="qedqde"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qedqde</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qedqde</canvas>
   </details>
       <p>移除栈顶位置向量，并返回该处光照强度。</p>
   </div>
@@ -970,7 +966,7 @@
         data-string="wawdedwaw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wawdedwaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wawdedwaw</canvas>
   </details>
       <p>移除栈顶数，返回其阶乘。例如输入 4 则会返回 4 * 3 * 2 * 1 = 24。</p>
   </div>
@@ -990,7 +986,7 @@
         data-string="aea"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aea</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aea</canvas>
   </details>
       <p>接受栈顶列表，并计算其前缀和。例如输入 [1, 2, 5] 则会返回 [1, 3, 8]。</p>
   </div>
@@ -1010,7 +1006,7 @@
         data-string="qaawaaq"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaawaaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaawaaq</canvas>
   </details>
       <p>接受栈顶列表，并计算其前缀积。例如输入 [1, 2, 5] 则会返回 [1, 2, 10]。</p>
   </div>
@@ -1041,7 +1037,7 @@
         data-string="awd"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awd</canvas>
   </details>
       <p>移除栈顶元素，并返回该 iota 的类型。</p>
   </div>
@@ -1061,7 +1057,7 @@
         data-string="qawde"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qawde</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qawde</canvas>
   </details>
       <p>移除栈顶实体，并返回该实体的类型。</p>
   </div>
@@ -1081,7 +1077,7 @@
         data-string="qaqqaea"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaqqaea</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaqqaea</canvas>
   </details>
       <p>移除栈顶位置向量，<a href='#patterns/spells/motes'><span style='color: #b0b'>物元</span></a>，物品实体或物品展示框。并返回该处方块的类型或对应物品类型。（如草方块、石头、木棍等。）</p>
   </div>
@@ -1101,7 +1097,7 @@
         data-string="edeedqd"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edeedqd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edeedqd</canvas>
   </details>
       <p>若施法者副手中有物品，则将其类型压入栈顶；若无，则压入施法用手中物品的类型。</p>
   </div>
@@ -1121,7 +1117,7 @@
         data-string="dadqqqqqdad"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dadqqqqqdad</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dadqqqqqdad</canvas>
   </details>
       <p>从栈顶获取实体类型和位置向量，返回该位置符合该类型的实体（若有）。</p>
   </div>
@@ -1141,7 +1137,7 @@
         data-string="waweeeeewaw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: waweeeeewaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：waweeeeewaw</canvas>
   </details>
       <p>从栈顶获取实体类型、位置向量及最大距离，返回该位置给定距离范围内所有符合给定类型的实体的列表。</p>
   </div>
@@ -1161,7 +1157,7 @@
         data-string="wdwqqqqqwdw"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wdwqqqqqwdw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wdwqqqqqwdw</canvas>
   </details>
       <p>从栈顶获取实体类型、位置向量及最大距离，返回该位置给定距离范围内所有不符合给定类型的实体的列表。</p>
   </div>
@@ -1195,7 +1191,7 @@
         data-string="eweeewedqdeddw"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eweeewedqdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eweeewedqdeddw</canvas>
   </details>
       <p>接受指向<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>的位置向量，与一个作为密钥的图案，并返回永恒之书中对应密钥处的 iota，若能存储则同时会将其存至给定的<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>中。</p>
   </div>
@@ -1215,7 +1211,7 @@
         data-string="qwqqqwqaeaqaaw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qwqqqwqaeaqaaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwqqqwqaeaqaaw</canvas>
   </details>
       <p>接受指向<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>的位置向量，与一个作为密钥的图案，并将阿卡夏记录中该图案对应的 iota 以同一图案存至永恒之书中。</p>
   </div>
@@ -1235,7 +1231,7 @@
         data-string="qwqqqwqaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qwqqqwqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwqqqwqaww</canvas>
   </details>
       <p>接受一个图案，并移除永恒之书中该图案对应的条目。</p>
   </div>
@@ -1255,7 +1251,7 @@
         data-string="eweeewedww"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eweeewedww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eweeewedww</canvas>
   </details>
       <p>接受一个图案，并以该图案标记永恒之书中对应条目，使得绘制该图案所产生的效果和自然创造的其他图案相仿。</p>
   </div>
@@ -1316,7 +1312,7 @@
         data-string="wqqqwqqadad"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wqqqwqqadad</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wqqqwqqadad</canvas>
   </details>
       <p>移除栈顶位置向量、物品实体或物元，然后烧炼该处方块，或同时烧炼物品实体或物元中所有物品。</p>
   </div>
@@ -1338,7 +1334,7 @@
         data-string="weeeweedada"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: weeeweedada</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：weeeweedada</canvas>
   </details>
       <p>冻结所给坐标处方块。例如，水变为冰，冰变为浮冰。消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -1358,7 +1354,7 @@
         data-string="wqwawqwqwqwqwqw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wqwawqwqwqwqwqw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wqwawqwqwqwqwqw</canvas>
   </details>
       <p>移除栈顶位置向量，并使该处方块下落，就像沙子和沙砾一样。消耗 3/2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -1378,7 +1374,7 @@
         data-string="eeeeedeeeee"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeedeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeedeeeee</canvas>
   </details>
       <p>接受一个物品类型或物元和一个位置向量，并会尝试在该位置处放置所给物品类型的方块。若传入物元，则会从对应的物元记录中放置。消耗 1/8 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -1398,7 +1394,7 @@
         data-string="eqqqqa"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqqqqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqqqqa</canvas>
   </details>
       <p>接受一个位置向量或一个由位置向量组成的列表，并在所给位置处生成粒子，或在所给列表各位置之间生成粒子连线。每个位置向量消耗 1/500 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -1433,7 +1429,7 @@
         data-string="aqaeqeeeee"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaeqeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaeqeeeee</canvas>
   </details>
       <p>这种咒灵被召唤时会像箭一样被弹射出去，而后会在其击中的事物上施放咒术。其初始栈包含一个代表其自身的 iota 和一个代表其击中的事物的 iota。</p>
   </div>
@@ -1455,7 +1451,7 @@
         data-string="aqaweewaqawee"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaweewaqawee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaweewaqawee</canvas>
   </details>
       <p>此法术与召唤弹射式咒灵类似，但只会接受一个代表召唤位置的向量。循环式咒灵一经召唤就不再移动，并会以每秒 20 次的频率施法。</p>
   </div>
@@ -1477,7 +1473,7 @@
         data-string="dedwqqwdedwqqaw"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dedwqqwdedwqqaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dedwqqwdedwqqaw</canvas>
   </details>
       <p>返回一个代表施法咒灵的 iota。此操作必须由咒灵执行。尝试用法杖执行会招致可怖的事故。</p>
   </div>
@@ -1497,7 +1493,7 @@
         data-string="aqaweewaqaweedw"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaweewaqaweedw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaweewaqaweedw</canvas>
   </details>
       <p>将咒灵媒质池中剩余的媒质量压入栈顶。此操作必须由咒灵执行。尝试用法杖执行会招致可怖的事故。</p>
   </div>
@@ -1517,7 +1513,7 @@
         data-string="aweewaqaweewaawww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweewaqaweewaawww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweewaqaweewaawww</canvas>
   </details>
       <p>移除一个咒灵实体，并返回该咒灵所携带的咒术。所给 iota 必须代表由我召唤的咒灵。</p>
   </div>
@@ -1537,7 +1533,7 @@
         data-string="dwqqwdedwqqwddwww"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dwqqwdedwqqwddwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dwqqwdedwqqwddwww</canvas>
   </details>
       <p>移除一个咒灵实体和一个实体，若该实体是该咒灵的所有者，返回 True；否则返回 False。</p>
   </div>
@@ -1557,7 +1553,7 @@
         data-string="awqwawqaw"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awqwawqaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awqwawqaw</canvas>
   </details>
       <p>移除栈顶位置向量。运行此图案的循环式咒灵会沿直线移动至所给位置（会与途中地形地貌等碰撞），直至抵达该位置处。</p>
   </div>
@@ -1577,7 +1573,7 @@
         data-string="ewdwewdew"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: ewdwewdew</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：ewdwewdew</canvas>
   </details>
       <p>返回循环式咒灵自身当前目标位置的位置向量。</p>
   </div>
@@ -1597,7 +1593,7 @@
         data-string="aeawqqqae"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aeawqqqae</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aeawqqqae</canvas>
   </details>
       <p>移除栈顶数，并将循环式咒灵自身的速度上限设为该数。</p>
   </div>
@@ -1617,7 +1613,7 @@
         data-string="eeewdqdee"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeewdqdee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeewdqdee</canvas>
   </details>
       <p>返回循环式咒灵自身当前速度上限。</p>
   </div>
@@ -1637,7 +1633,7 @@
         data-string="qqqqqewwqeeeee"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqewwqeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqewwqeeeee</canvas>
   </details>
       <p>当两咒灵<a href='#patterns/spells/links'><span style='color: #8d6acc'>连接</span></a>时，它们会相互转送媒质，直至两者平衡。默认状况下，仅所有者相同的咒灵会自发转送。此操作接受一个编号数，并显式允许咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
@@ -1657,7 +1653,7 @@
         data-string="qqqqqeqdeddweqqqqq"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqeqdeddweqqqqq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqeqdeddweqqqqq</canvas>
   </details>
       <p>相应地，此操作接受一个编号数，并禁止咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
@@ -1677,7 +1673,7 @@
         data-string="eeeeeqwweqqqqq"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeeqwweqqqqq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeeqwweqqqqq</canvas>
   </details>
       <p>接受一个咒灵实体（所有者需是我）和一个编号数，并禁止该咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
@@ -1697,7 +1693,7 @@
         data-string="eeeeeqeaqaawqeeeee"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeeqeaqaawqeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeeqeaqaawqeeeee</canvas>
   </details>
       <p>接受一个咒灵实体（所有者需是我）和一个编号数，并允许该咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
@@ -1717,7 +1713,7 @@
         data-string="qqwdedwqqdaqaaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqwdedwqqdaqaaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqwdedwqqdaqaaww</canvas>
   </details>
       <p>将栈顶位置向量变为该处咒灵（若无则返回 <a href='https://object-object.github.io/HexMod/v/0.10.3#casting/influences'><span style='color: #8d6acc'>Null</span></a>）。</p>
   </div>
@@ -1737,7 +1733,7 @@
         data-string="qqwdedwqqwdeddww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqwdedwqqwdeddww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqwdedwqqwdeddww</canvas>
   </details>
       <p>从栈顶获取位置及最大距离，返回该位置给定距离范围内所有咒灵的列表。</p>
   </div>
@@ -1757,7 +1753,7 @@
         data-string="eewaqaweewaqaaww"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eewaqaweewaqaaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eewaqaweewaqaaww</canvas>
   </details>
       <p>从栈顶获取位置及最大距离，返回该位置给定距离范围内所有非咒灵实体的列表。</p>
   </div>
@@ -1777,7 +1773,7 @@
         data-string="aqawded"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqawded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqawded</canvas>
   </details>
       <p>移除栈顶数，然后将咒灵下一次施法时刻延迟所给数个 1/20 秒。所有可用于延迟咒灵施法的操作均能使咒灵的常态消耗减半，直到下一次施法为止。</p>
   </div>
@@ -1797,7 +1793,7 @@
         data-string="aqqqqqwdeddw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqqqqqwdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqqqqqwdeddw</canvas>
   </details>
       <p>咒灵将在其收到至少一次<a href='#patterns/spells/links@hexal:link/comm/send'><span style='color: #fc77be'>通信</span></a>后才进行下一次施法。</p>
   </div>
@@ -1817,7 +1813,7 @@
         data-string="eqwawqwaqww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqwawqwaqww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqwawqwaqww</canvas>
   </details>
       <p>咒灵将在其抵达被<a href='#patterns/spells/wisps@hexal:wisp/move/target/set'><span style='color: #fc77be'>导向</span></a>的位置后才进行下一次施法。</p>
   </div>
@@ -1852,7 +1848,7 @@
         data-string="eaqaaeqqqqqaweaqaaw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eaqaaeqqqqqaweaqaaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eaqaaeqqqqqaweaqaaw</canvas>
   </details>
       <p>将施法者链接至栈顶实体，且实体必须为可链接的。消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>。</p>
   </div>
@@ -1872,7 +1868,7 @@
         data-string="eqqqqqawqeeeeedww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqqqqqawqeeeeedww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqqqqqawqeeeeedww</canvas>
   </details>
       <p>可在任意施法器件上运行。将两个实体链接，且两实体必须均为可链接的。消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>。</p>
   </div>
@@ -1892,7 +1888,7 @@
         data-string="qdeddqeeeeedwqdeddw"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qdeddqeeeeedwqdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qdeddqeeeeedwqdeddw</canvas>
   </details>
       <p>断开施法者的编号为所给数的链接。消耗 2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -1912,7 +1908,7 @@
         data-string="qeeeeedweqqqqqaww"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qeeeeedweqqqqqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qeeeeedweqqqqqaww</canvas>
   </details>
       <p>接受两个可链接事物，若其间存在链接，则会将其断开。消耗 2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -1932,7 +1928,7 @@
         data-string="eqqqqqaww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqqqqqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqqqqqaww</canvas>
   </details>
       <p>移除栈顶数，并返回对应编号的链接所连的实体。</p>
   </div>
@@ -1952,7 +1948,7 @@
         data-string="aeqqqqqawwd"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aeqqqqqawwd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aeqqqqqawwd</canvas>
   </details>
       <p>移除栈顶实体，并返回自身与该实体相连的链接的编号。若施法者与其无链接则返回 -1。</p>
   </div>
@@ -1972,7 +1968,7 @@
         data-string="qeeeeedww"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qeeeeedww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qeeeeedww</canvas>
   </details>
       <p>返回自身的链接个数。</p>
   </div>
@@ -1992,7 +1988,7 @@
         data-string="qqqqqwdeddw"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqwdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqwdeddw</canvas>
   </details>
       <p>移除栈顶元素与数，而后向编号为该数的链接发送该元素。消耗 1/100 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -2012,7 +2008,7 @@
         data-string="weeeeew"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: weeeeew</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：weeeeew</canvas>
   </details>
       <p>当接收到 iota 时其将被加至一个队列中。此图案会将该队列中的首个 iota 压入栈顶并移出队列。</p>
   </div>
@@ -2032,7 +2028,7 @@
         data-string="aweeeeewaa"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweeeeewaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweeeeewaa</canvas>
   </details>
       <p>返回接收队列中未读 iota 的个数。</p>
   </div>
@@ -2052,7 +2048,7 @@
         data-string="aweeeeewa"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweeeeewa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweeeeewa</canvas>
   </details>
       <p>移除施法者接收队列中所有未读 iota。</p>
   </div>
@@ -2072,7 +2068,7 @@
         data-string="qwdedwq"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qwdedwq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwdedwq</canvas>
   </details>
       <p>与<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/patterns_as_iotas@hexcasting:open_paren'><span style='color: #fc77be'>内省</span></a>类似。在绘制<a href='#patterns/spells/links@hexal:link/comm/close_transmit'><span style='color: #fc77be'>结束发信</span></a>后，所有我绘制的图案会通过编号为栈顶数的链接发送出去。</p>
   </div>
@@ -2092,7 +2088,7 @@
         data-string="ewaqawe"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: ewaqawe</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：ewaqawe</canvas>
   </details>
       <p>在<a href='#patterns/spells/links@hexal:link/comm/open_transmit'><span style='color: #fc77be'>开始发信</span></a>之后绘制，意味着发信过程结束。如果<a href='#patterns/spells/links@hexal:link/comm/open_transmit'><span style='color: #fc77be'>开始发信</span></a>或<a href='#patterns/spells/links@hexal:link/comm/close_transmit'><span style='color: #fc77be'>结束发信</span></a>是由中介施法者（如咒灵）运行的话，则会产生事故。</p>
   </div>
@@ -2116,7 +2112,7 @@
     <p>物元枢纽也有部分限制，但也只是部分。它最多能存放 1023 条记录，但每条记录中物品的个数则没有上限。我还没发现任何能证明上限存在的证据，我能合并再合并再合并再合并直到永远记录增长然后增长然后增……</p>
 <br />
     <blockquote class="crafting-info">
-    Depicted in the book: A mind-flaying recipe producing the <code>物元枢纽</code>.
+    书中显示如下事物的意识剥离配方： <code>物元枢纽</code>.
   </blockquote>
   <p>物元枢纽是用制图师的意识制成的，它会永不中断地标记和映射对应<span style='color: #b0b'>潜影盒</span>中的物品。</p>
 <br />
@@ -2135,7 +2131,7 @@
         data-string="qaqwqaqwqaq"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaqwqaqwqaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaqwqaqwqaq</canvas>
   </details>
       <p>锚定一个物元枢纽，并将自身与其绑定，所有我媒质化的物品都会存入该枢纽。若锚定至其他枢纽则会自动解开与原枢纽的绑定。消耗 32 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -2155,7 +2151,7 @@
         data-string="edewedewede"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edewedewede</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edewedewede</canvas>
   </details>
       <p>锚定一个物元枢纽，在当前咒术结束前将自身与其绑定。其在本咒术内会暂时覆盖永久性绑定的枢纽。消耗 1/1000 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -2175,7 +2171,7 @@
         data-string="dwqqqqqwddww"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dwqqqqqwddww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dwqqqqqwddww</canvas>
   </details>
       <p>获取当前绑定的枢纽中所有物元的类型。</p>
   </div>
@@ -2195,7 +2191,7 @@
         data-string="aweeeeewaaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweeeeewaaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweeeeewaaww</canvas>
   </details>
       <p>获取当前绑定的枢纽中所有和所给物品类型对应的，或所有可与所给物元合并的物元。</p>
   </div>
@@ -2215,7 +2211,7 @@
         data-string="awedqdewa"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awedqdewa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awedqdewa</canvas>
   </details>
       <p>获取所绑定的枢纽剩余的空间。</p>
   </div>
@@ -2235,7 +2231,7 @@
         data-string="dwqaeaqwd"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dwqaeaqwd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dwqaeaqwd</canvas>
   </details>
       <p>若所给位置的物元枢纽中包含所给类型的物元，或包含可与所给物元合并的物元，则返回 True，否则返回 False。</p>
   </div>
@@ -2255,7 +2251,7 @@
         data-string="eaqa"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eaqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eaqa</canvas>
   </details>
       <p>将世界中的物品（物品实体、物品展示框）转换为物元。若传入物元，则会将所给物体与该物元合并。媒质化 1 份物品消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -2275,7 +2271,7 @@
         data-string="qded"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qded</canvas>
   </details>
       <p>将物元中所有物品返还到所给位置处。若传入数，则最多返还该数个物品。消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -2295,7 +2291,7 @@
         data-string="qqqqwqqqqqaa"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqwqqqqqaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqwqqqqqaa</canvas>
   </details>
       <p>接受物元，并返回该物元对应的记录中物品的个数。</p>
   </div>
@@ -2315,7 +2311,7 @@
         data-string="aqaeqded"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaeqded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaeqded</canvas>
   </details>
       <p>将两个物元合并，也同时合并两者所指向的物元记录。指向第二条记录的物元会变为 Null，指向第一条的物元不会。如此就能在栈中放下远超我随身携带量的物品了！</p>
   </div>
@@ -2335,7 +2331,7 @@
         data-string="dedqeaqa"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dedqeaqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dedqeaqa</canvas>
   </details>
       <p>若第一参数物元可与第二参数（物元、物品实体、物品展示框）中物品合并，返回 True，否则返回 False。</p>
   </div>
@@ -2355,7 +2351,7 @@
         data-string="eaqaaw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eaqaaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eaqaaw</canvas>
   </details>
       <p>从所给物元中拆分出所给数个物品，以此创建一条物元记录并返回对应物元 iota。</p>
   </div>
@@ -2375,7 +2371,7 @@
         data-string="qqqqqaw"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqaw</canvas>
   </details>
       <p>获取存储所给物元的枢纽的位置。</p>
   </div>
@@ -2395,7 +2391,7 @@
         data-string="eeeeedw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeedw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeedw</canvas>
   </details>
       <p>将所给物元对应的记录转移到所给位置处的物元枢纽中，并会返回指向新记录的物元 iota，且所有指向原记录的物元均会失效。</p>
   </div>
@@ -2415,7 +2411,7 @@
         data-string="wwawdedwawdewwdwaqawdwwedwawdedwaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wwawdedwawdewwdwaqawdwwedwawdedwaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wwawdedwawdewwdwaqawdwwedwawdedwaww</canvas>
   </details>
       <p>接受物元，物元组成的列表，或物元列表组成的列表。并返回包含以对应物品合成所得产物的列表。例如，输入“石头 x128”会返回 [石头按钮 x128]。</p>
   </div>
@@ -2437,7 +2433,7 @@
         data-string="qqwdedwqqaww"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqwdedwqqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqwdedwqqaww</canvas>
   </details>
       <p>接受代表村民的 iota，并返回代表该村民在其职业上熟练度的数。</p>
   </div>
@@ -2457,7 +2453,7 @@
         data-string="awdedwaawwqded"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awdedwaawwqded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awdedwaawwqded</canvas>
   </details>
       <p>接受代表村民的 iota，并返回该村民所有的交易选项，返回结果是列表的列表的列表。每项交易由两个列表组成，内容分别为给出的物品和换得的物品。换得物品列表由对应的物品类型和可换得物品的数量组成。</p>
   </div>
@@ -2479,7 +2475,7 @@
         data-string="awdedwaeqded"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awdedwaeqded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awdedwaeqded</canvas>
   </details>
       <p>接受代表村民的 iota，由物元组成的列表（用于交易），和代表交易次序的整数（可选）。（上方的 int? 表示可传入 2 或 3 个参数，可选的第三个参数需为整数。）</p>
   </div>
@@ -2503,7 +2499,7 @@
         data-string="qqqwqqqqaa"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqwqqqqaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqwqqqqaa</canvas>
   </details>
       <p>接受一个物元和一个实体或位置向量和法向量。并对实体或所给位置处方块使用物元中物品。物元本身需只能含有一个物品，或其中物品极为简单（无 NBT 数据）。</p>
   </div>
@@ -2547,7 +2543,7 @@
         data-string="wwwdwdwwwawqqeqwqqwqeqwqq"
         data-start="south_east"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: wwwdwdwwwawqqeqwqqwqeqwqq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wwwdwdwwwawqqeqwqqwqeqwqq</canvas>
   </details>
       <p>在法术运行的那一刻，加速所给位置处方块的运作。</p>
   </div>
@@ -2580,7 +2576,7 @@
         data-string="wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww"
         data-start="north_west"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww</canvas>
   </details>
       <p>移除栈顶咒灵实体，并拆解该咒灵。咒灵携带的图案不可追回，但是如果此法术是由其他咒灵施放的，那么被拆解咒灵所剩的媒质还可再加利用。</p>
   </div>
@@ -2602,7 +2598,7 @@
         data-string="aqweewqaeaqweewqaqwww"
         data-start="south_west"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: aqweewqaeaqweewqaqwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqweewqaeaqweewqaqwww</canvas>
   </details>
       <p>在我的咒灵和我之间建立更紧密的联系。我只能同时绑定一个咒灵，但绑定咒灵的常态消耗将大大减少。</p>
   </div>
@@ -2622,7 +2618,7 @@
         data-string="daqweewqaeaqweewqaqwwww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: daqweewqaeaqweewqaqwwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：daqweewqaeaqweewqaqwwww</canvas>
   </details>
       <p>返回我当前绑定的咒灵。（这并不是卓越法术，记载于此是为了方便查找。）</p>
   </div>
@@ -2659,7 +2655,7 @@
         data-string="qwqwqwqwqwqqeaeaeaeaeae"
         data-start="west"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: qwqwqwqwqwqqeaeaeaeaeae</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwqwqwqwqwqqeaeaeaeaeae</canvas>
   </details>
       <p>压入一个新的门径。所有此 iota 的复制品都指向同一个门径。消耗 32 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>充能紫水晶</span></a>。若传入 Null，则构造未锚定门径；若传入一个向量，则构造位置锚定门径；若传入一个向量和一个实体，则构造实体锚定门径。</p>
   </div>
@@ -2679,7 +2675,7 @@
         data-string="qaqeede"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaqeede</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaqeede</canvas>
   </details>
       <p>移除栈顶实体与门径，并标记该实体，被标记的实体会在对应门径关闭时被传送。消耗 1/20 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
@@ -2699,7 +2695,7 @@
         data-string="edeqqaq"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edeqqaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edeqqaq</canvas>
   </details>
       <p>移除栈顶门径与实体，并取消该实体的标记。若其已被<a href='#patterns/great_spells/gates@hexal:gate/mark'><span style='color: #fc77be'>开启门径</span></a>标记，下一次门径关闭时其将不会被传送。</p>
   </div>
@@ -2719,7 +2715,7 @@
         data-string="qawwaqqqaq"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qawwaqqqaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qawwaqqqaq</canvas>
   </details>
       <p>移除栈顶门径，返回被该门径标记的实体的数量。</p>
   </div>
@@ -2739,7 +2735,7 @@
         data-string="edwwdeeede"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edwwdeeede</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edwwdeeede</canvas>
   </details>
       <p>移除栈顶门径和实体，判断该实体是否被该门径标记。</p>
   </div>
@@ -2759,7 +2755,7 @@
         data-string="qqqwwqqqwqqawdedw"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqwwqqqwqqawdedw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqwwqqqwqqawdedw</canvas>
   </details>
       <p>移除栈顶锚定门径，或未锚定门径与位置向量。将所有被所给门径标记的实体传送至其锚定位置或所给位置。消耗 1/2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>。若为未锚定门径，则每个实体每传送 1 格额外消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
