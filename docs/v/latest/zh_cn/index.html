@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hexal Book</title>
+    <title>hexdoc.hexal.title</title>
     <link rel="icon" href="icon.png">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="The Hexal Book, all in one place." />
+    <meta name="description" content="hexdoc.hexal.description" />
     <meta name="author" content="Talia-12" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hexal Book" />
-    <meta property="og:image" content="https://object-object.github.io/Hexal/v/latest/icon.png" />
-    <meta property="og:url" content="https://object-object.github.io/Hexal/v/latest" />
-    <meta property="og:description" content="The Hexal Book, all in one place." />
+    <meta property="og:title" content="hexdoc.hexal.title" />
+    <meta property="og:image" content="https://object-object.github.io/Hexal/v/latest/zh_cn/icon.png" />
+    <meta property="og:url" content="https://object-object.github.io/Hexal/v/latest/zh_cn" />
+    <meta property="og:description" content="hexdoc.hexal.description" />
     <meta property="og:site_name" content="Hexal" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
       integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -20,7 +20,7 @@
       integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
       integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://object-object.github.io/Hexal/v/latest/index.css">
+    <link rel="stylesheet" href="https://object-object.github.io/Hexal/v/latest/zh_cn/index.css">
     <noscript>
       <style>
         /* for accessibility */
@@ -224,7 +224,7 @@
             context.fillText(
               // these variables are filled by Jinja
               // slightly scuffed, but it works for now
-              speedScale() ? `${speedScale()}x` : "Paused",
+              speedScale() ? `${speedScale()}x` : "暂停",
               0.2 * scale,
               canvas.height - 0.2 * scale
             );
@@ -301,9 +301,9 @@
       }
       // these are filled by Jinja
       const ROOT_URL = "https://object-object.github.io/Hexal";
-      const PAGE_URL = "https://object-object.github.io/Hexal/v/latest";
+      const PAGE_URL = "https://object-object.github.io/Hexal/v/latest/zh_cn";
       const VERSION = "latest";
-      const LANG = "en_us";
+      const LANG = "zh_cn";
       // Creates an element in the form `<li><a href=${href}>${text}</a></li>`
       function dropdownItem(text, href) {
         let a = document.createElement("a");
@@ -415,7 +415,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://object-object.github.io/Hexal">Hexal Book</a>
+      <a class="navbar-brand" href="https://object-object.github.io/Hexal">hexdoc.hexal.title</a>
     </div>
     <!-- content -->
     <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -439,7 +439,7 @@
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
-          >en_us <span class="caret"></span></a>
+          >zh_cn <span class="caret"></span></a>
           <ul class="dropdown-menu dropdown-menu-left" id="lang-dropdown"></ul>
         </li>
       </ul>
@@ -448,13 +448,13 @@
 </nav>
 <div class="container" style="margin-top: 3em;">
   <blockquote>
-    <h1><p>This is the online version of the Hexal documentation.</p></h1>
-    <p><p>Embedded images and patterns are included, but not crafting recipes or items. There&#39;s an in-game book for those.</p></p>
-      <p><p>Additionally, this is built from the latest code on GitHub. It may describe <strong>newer</strong> features that you may not necessarily have, even on the latest Modrinth/CurseForge version!</p></p>
-    <p><p><strong>Entries which are blurred are spoilers</strong>. Click to reveal them, but be aware that they may spoil endgame progression. Alternatively, click <a href='?nospoiler'>here</a> to get a version with all spoilers showing.</p></p>
+    <h1><p>这是Hexal文档的在线版本。</p></h1>
+    <p><p>此版本会显示文档内嵌的图片和图案，合成配方和物品则不会。缺失的内容请查阅游戏内手册。</p></p>
+      <p><p>此外，此版本是根据GitHub上最新代码构建而来的。其中可能包含游戏内暂未实装的<strong>新</strong>特性，就连Modrinth和CurseForge上的最新版本里也找不到！</p></p>
+    <p><p><strong>条目的模糊处理相当于剧透警告</strong>。点击可取消模糊，不过这么做有可能破坏游戏后期的进程与体验。也可点击<a href='?nospoiler'>此处</a>以取消所有模糊。</p></p>
     <span id="old-version-notice" class="hidden">
       <br />
-      <p><i>The past is a foreign country; they do things differently there.</i></p>
+      <p><i>往事犹若异乡；他们在那里做的事情都不一样。</i></p>
     </span>
   </blockquote>
 </div>
@@ -462,11 +462,11 @@
 <div id="table-of-contents"></div>
 <nav class="toc-container">
   <h2 class="page-header">
-    Table of <span class="nobr">Contents<a
+    <span class="nobr">目录<a
       href="javascript:void(0)"
       class="permalink toggle-link small"
       data-target="toc-category"
-      title="Toggle all"
+      title="显示或收起全部"
     ><i class="bi bi-list-nested"></i></a><a
     href="#table-of-contents"
     class="permalink small toc-permalink"
@@ -474,54 +474,54 @@
   ><i class="bi bi-link-45deg"></i></a></span>
   </h2>
     <details class="toc-category">
-      <summary><a href="#basics">Getting Started</a></summary>
+      <summary><a href="#basics">hexcasting.entry.basics</a></summary>
       <ul>
-          <li><a href="#basics/slipways">Slipways</a></li>
+          <li><a href="#basics/slipways">质道</a></li>
       </ul>
     </details>
     <details class="toc-category">
-      <summary><a href="#items">Items</a></summary>
+      <summary><a href="#items">hexcasting.entry.items</a></summary>
       <ul>
-          <li><a href="#items/relay">Relay</a></li>
+          <li><a href="#items/relay">继链器</a></li>
       </ul>
     </details>
     <details class="toc-category">
-      <summary><a href="#interop">Cross-Mod Compatibility</a></summary>
+      <summary><a href="#interop">hexcasting.entry.interop</a></summary>
       <ul>
-          <li><a href="#interop/fabric_only_hexal">Fabric-Only Hexal Spells</a></li>
+          <li><a href="#interop/fabric_only_hexal">咒术拓展：Fabric 独占法术</a></li>
       </ul>
     </details>
     <details class="toc-category">
-      <summary><a href="#patterns">Patterns</a></summary>
+      <summary><a href="#patterns">hexcasting.entry.patterns</a></summary>
       <ul>
-          <li><a href="#patterns/hexal_basics">Hexal Basic Patterns</a></li>
-          <li><a href="#patterns/hexal_maths">Hexal Maths</a></li>
-          <li><a href="#patterns/types">Types</a></li>
-          <li><a href="#patterns/everbook" class="spoilered">Everbook</a></li>
-          <li><a href="#patterns/everbook_entries" class="spoilered">Everbook Entries</a></li>
+          <li><a href="#patterns/hexal_basics">咒法拓展：基础图案</a></li>
+          <li><a href="#patterns/hexal_maths">咒法拓展：数学</a></li>
+          <li><a href="#patterns/types">类型</a></li>
+          <li><a href="#patterns/everbook" class="spoilered">永恒之书</a></li>
+          <li><a href="#patterns/everbook_entries" class="spoilered">永恒之书条目</a></li>
       </ul>
     </details>
     <details class="toc-category">
-      <summary><a href="#patterns/spells">Spells</a></summary>
+      <summary><a href="#patterns/spells">hexcasting.entry.spells</a></summary>
       <ul>
-          <li><a href="#patterns/spells/hexal_spells">Hexal Spells</a></li>
-          <li><a href="#patterns/spells/wisps">Wisps</a></li>
-          <li><a href="#patterns/spells/links">Links</a></li>
-          <li><a href="#patterns/spells/motes" class="spoilered">Motes</a></li>
+          <li><a href="#patterns/spells/hexal_spells">咒法拓展：法术</a></li>
+          <li><a href="#patterns/spells/wisps">咒灵</a></li>
+          <li><a href="#patterns/spells/links">链接</a></li>
+          <li><a href="#patterns/spells/motes" class="spoilered">物元</a></li>
       </ul>
     </details>
     <details class="toc-category">
-      <summary><a href="#patterns/great_spells">Great Spells</a></summary>
+      <summary><a href="#patterns/great_spells">hexcasting.entry.great_spells</a></summary>
       <ul>
-          <li><a href="#patterns/great_spells/tick">Accelerate</a></li>
-          <li><a href="#patterns/great_spells/great_wisps">Great Wisp Spells</a></li>
-          <li><a href="#patterns/great_spells/gates">Gates</a></li>
+          <li><a href="#patterns/great_spells/tick">加速</a></li>
+          <li><a href="#patterns/great_spells/great_wisps">卓越咒灵法术</a></li>
+          <li><a href="#patterns/great_spells/gates">门径</a></li>
       </ul>
     </details>
 </nav>
   <main class="book-body">
 <section id="basics">
-    <h2 class="category-title page-header">Getting Started<a
+    <h2 class="category-title page-header">hexcasting.entry.basics<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -530,9 +530,9 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h2>
-    <p>The practitioners of this art would cast their so-called <span style='color: #b38ef3'>Hexes</span> by drawing strange patterns in the air with a <a href='https://object-object.github.io/HexMod/v/0.10.3#items/staff'><span style='color: #b0b'>staff</span></a>-- or craft <a href='https://object-object.github.io/HexMod/v/0.10.3#items/hexcasting'><span style='color: #b0b'>powerful magical items</span></a> to do the casting for them. How might I do the same?</p>
+    <p>hexcasting.entry.basics.desc</p>
 <div id="basics/slipways">
-    <h3 class="entry-title page-header">Slipways<a
+    <h3 class="entry-title page-header">质道<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -541,12 +541,12 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>I have heard tales of some geodes in which glowing portals called slipways lie. These slipways are regularly depicted with glowing sparks surrounding them that bear an incredible resemblance to the <a href='#patterns/spells/wisps'><span style='color: #8d6acc'>wisps</span></a> that I have heard tell of, which may be a connection to look into.</p>
+    <p>我曾听说过某些晶洞中有形如泛着光的传送门的东西，它们被称作“质道”。这些质道通常“被莹莹光点围绕”，和我所知的<a href='#patterns/spells/wisps'><span style='color: #8d6acc'>咒灵</span></a>十分相似。也许它们之间的联系值得研究。</p>
 <br />
 </div>
 </section>
 <section id="items">
-    <h2 class="category-title page-header">Items<a
+    <h2 class="category-title page-header">hexcasting.entry.items<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -555,9 +555,9 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h2>
-    <p>I devote this section to the magical and mysterious items I might encounter in my studies.</p><p>It seems like many of these items have uses when held alongside my <a href='https://object-object.github.io/HexMod/v/0.10.3#items/staff'><span style='color: #b0b'>staff</span></a>. I suppose I will have to choose what goes in my other hand carefully.</p>
+    <p>hexcasting.entry.items.desc</p>
 <div id="items/relay">
-    <h3 class="entry-title page-header">Relay<a
+    <h3 class="entry-title page-header">继链器<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -566,19 +566,19 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>Often I wish to <a href='#patterns/spells/links@hexal:link'><span style='color: #fc77be'>link</span></a> together multiple <a href='#patterns/spells/wisps'><span style='color: #8d6acc'>wisps</span></a>, so that they can share media and information over long distances. However running long chains of wisps to transfer these over great distances is inconvenient, and has great upkeep costs. To resolve this issue I have made Relays. Since they are solid blocks rather than media constructs themselves, they are able to maintain the links without any upkeep costs at all.</p>
+    <p>我常希望有方法能<a href='#patterns/spells/links@hexal:link'><span style='color: #fc77be'>连接</span></a>多个<a href='#patterns/spells/wisps'><span style='color: #8d6acc'>咒灵</span></a>，以便远距共享媒质和信息。然而用咒灵远距中继相当不方便，常态消耗也很大。为解决这些问题，我制造出了继链器。它们是固态方块而非媒质构造体，也因此在维持链接时不会有常态消耗。</p>
 <br />
-    <p>Any relays connected together will form a network, with any wisps connected to a relay network able to share media between each other as if they were directly connected. Further, any iota sent to one relay in the network is passed on to every other non-relay connected to the network. Relays have a range of 32 blocks (this means two relays can connect at a distance of 64 blocks). The colour of a network&#39;s links can be changed by right clicking on any relay with a colouriser.</p>
+    <p>相互连接的继链器会形成网络，与之连接的咒灵会共享媒质，类似于咒灵间直接相连。此外，传给网络内任一继链器的 iota 会发送给连接至网络的所有非继链器事物。继链器的工作范围是 32 格（也即两个继链器可链接的最远距离为 64 格）。手持染色剂右击任一继链器即可改变网络链接的颜色。</p>
 <br />
   <blockquote class="crafting-info">
-    Depicted in the book: The crafting recipe for the <code>Relay</code>.
+    书中显示如下事物的合成配方： <code>继链器</code>.
   </blockquote>
-      <p>Relays have no owner, so if you want your wisps to <a href='#patterns/spells/wisps@hexal:wisp/transfer/allow'><span style='color: #fc77be'>transfer media</span></a> with them you must specifically allow them to do so.</p>
+      <p>继链器没有所有者，若要我的咒灵和其<a href='#patterns/spells/wisps@hexal:wisp/transfer/allow'><span style='color: #fc77be'>transfer media</span></a>，则必须先允许咒灵这么做。</p>
 <br />
 </div>
 </section>
 <section id="interop">
-    <h2 class="category-title page-header">Cross-Mod Compatibility<a
+    <h2 class="category-title page-header">hexcasting.entry.interop<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -587,9 +587,9 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h2>
-    <p>It appears I have installed some mods Hexcasting interoperates with! I&#39;ve detailed them here.</p>
+    <p>hexcasting.entry.interop.desc</p>
 <div id="interop/fabric_only_hexal">
-    <h3 class="entry-title page-header">Fabric-Only Hexal Spells<a
+    <h3 class="entry-title page-header">咒术拓展：Fabric 独占法术<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -599,7 +599,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="interop/fabric_only_hexal@hexal:interop/fabric_only/phase_block">
-<h4 class="pattern-title">Phase Block (vec, num →)<a
+<h4 class="pattern-title">暂消方块 (vec, num →)<a
     href="#interop/fabric_only_hexal@hexal:interop/fabric_only/phase_block"
     class="permalink small"
     title="Permalink"
@@ -613,15 +613,15 @@
         data-string="daqqqa"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: daqqqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：daqqqa</canvas>
   </details>
-      <p>Takes a position and a number, and phases the block at that position out for that many seconds. Costs one ten-thousandth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> times the square of the time to phase out for.</p>
+      <p>接受一个位置向量和一个数，并使所给位置上方块的体积消失所给数秒。消耗 1/1000 与消失时间的平方的乘积个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
 </div>
 </section>
 <section id="patterns">
-    <h2 class="category-title page-header">Patterns<a
+    <h2 class="category-title page-header">hexcasting.entry.patterns<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -630,9 +630,9 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h2>
-    <p>A list of all the patterns I&#39;ve discovered, as well as what they do.</p>
+    <p>hexcasting.entry.patterns.desc</p>
 <div id="patterns/hexal_basics">
-    <h3 class="entry-title page-header">Hexal Basic Patterns<a
+    <h3 class="entry-title page-header">咒法拓展：基础图案<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -642,7 +642,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/hexal_basics@hexal:current_tick">
-<h4 class="pattern-title">Timekeeper&#39;s Reflection (→ number)<a
+<h4 class="pattern-title">计时员之精思 (→ number)<a
     href="#patterns/hexal_basics@hexal:current_tick"
     class="permalink small"
     title="Permalink"
@@ -656,13 +656,13 @@
         data-string="ddwaa"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: ddwaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：ddwaa</canvas>
   </details>
-      <p>Adds a number to the stack which seems to be related to how Nature represents time; If I cast the pattern, then cast the same pattern a second later, the number it adds has increased by 20.</p>
+      <p>返回一个数，这个数似乎与自然记录时间的方式有关。如果先绘制一遍此图案，在 1 秒后再绘制一遍，返回的数会增加 20。</p>
   </div>
 <br />
   <div id="patterns/hexal_basics@hexal:remaining_evals">
-<h4 class="pattern-title">Thanatos&#39; Reflection (→ number)<a
+<h4 class="pattern-title">塔纳托斯之精思 (→ number)<a
     href="#patterns/hexal_basics@hexal:remaining_evals"
     class="permalink small"
     title="Permalink"
@@ -676,13 +676,13 @@
         data-string="qqaed"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqaed</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqaed</canvas>
   </details>
-      <p>Adds the number of evaluations a hex is still capable of to the stack. This is reduced by <a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>Hermes&#39; Gambit</span></a> and <a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:for_each'><span style='color: #fc77be'>Thoth&#39;s Gambit</span></a>.</p>
+      <p>将咒术在结束前还能运行图案的次数压入栈顶。结果会因<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>赫尔墨斯之策略</span></a>和<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:for_each'><span style='color: #fc77be'>托特之策略</span></a>而减少。</p>
   </div>
 <br />
   <div id="patterns/hexal_basics@hexal:breath">
-<h4 class="pattern-title">Diver&#39;s Purification (entity → num)<a
+<h4 class="pattern-title">潜水员之纯化 (entity → num)<a
     href="#patterns/hexal_basics@hexal:breath"
     class="permalink small"
     title="Permalink"
@@ -696,13 +696,13 @@
         data-string="aqawdwaqawd"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqawdwaqawd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqawdwaqawd</canvas>
   </details>
-      <p>Removes a Living entity from the stack and returns how much breath it has left (i.e., how close it is to drowning).</p>
+      <p>移除栈顶实体，并返回其剩余氧气值（也即距其溺水还有多少氧气值可消耗）。</p>
   </div>
 <br />
   <div id="patterns/hexal_basics@hexal:health">
-<h4 class="pattern-title">Nurse&#39;s Purification (entity → num)<a
+<h4 class="pattern-title">护士之纯化 (entity → num)<a
     href="#patterns/hexal_basics@hexal:health"
     class="permalink small"
     title="Permalink"
@@ -716,13 +716,13 @@
         data-string="aqwawqa"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqwawqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqwawqa</canvas>
   </details>
-      <p>Removes a Living entity from the stack and returns how much health it has left (i.e., how close it is to dying).</p>
+      <p>移除栈顶实体，并返回其剩余生命值（也即距其死亡还有多少生命值可损失）。</p>
   </div>
 <br />
   <div id="patterns/hexal_basics@hexal:armour">
-<h4 class="pattern-title">Squire&#39;s Purification (entity → num)<a
+<h4 class="pattern-title">乡绅之纯化 (entity → num)<a
     href="#patterns/hexal_basics@hexal:armour"
     class="permalink small"
     title="Permalink"
@@ -736,13 +736,13 @@
         data-string="wqqqqw"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wqqqqw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wqqqqw</canvas>
   </details>
-      <p>Removes a Living entity from the stack and returns how much armour it has.</p>
+      <p>移除栈顶实体，并返回其护甲值。</p>
   </div>
 <br />
   <div id="patterns/hexal_basics@hexal:toughness">
-<h4 class="pattern-title">Boxer&#39;s Purification (entity → num)<a
+<h4 class="pattern-title">拳击手之纯化 (entity → num)<a
     href="#patterns/hexal_basics@hexal:toughness"
     class="permalink small"
     title="Permalink"
@@ -756,13 +756,13 @@
         data-string="aeqqqqea"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aeqqqqea</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aeqqqqea</canvas>
   </details>
-      <p>Removes a Living entity from the stack and returns how much toughness it has (another property of armour).</p>
+      <p>移除栈顶实体，并返回其盔甲韧性（盔甲的另一属性）。</p>
   </div>
 <br />
   <div id="patterns/hexal_basics@hexal:light_level">
-<h4 class="pattern-title">Lamplighter&#39;s Prfn. (vec → num)<a
+<h4 class="pattern-title">灯夫之纯化 (vec → num)<a
     href="#patterns/hexal_basics@hexal:light_level"
     class="permalink small"
     title="Permalink"
@@ -776,14 +776,14 @@
         data-string="qedqde"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qedqde</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qedqde</canvas>
   </details>
-      <p>Removes a position vector from the stack and returns the light level at that position.</p>
+      <p>移除栈顶位置向量，并返回该处光照强度。</p>
   </div>
 <br />
 </div>
 <div id="patterns/hexal_maths">
-    <h3 class="entry-title page-header">Hexal Maths<a
+    <h3 class="entry-title page-header">咒法拓展：数学<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -793,7 +793,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/hexal_maths@hexal:factorial">
-<h4 class="pattern-title">Factorial Purification (num → num)<a
+<h4 class="pattern-title">阶乘之纯化 (num → num)<a
     href="#patterns/hexal_maths@hexal:factorial"
     class="permalink small"
     title="Permalink"
@@ -807,13 +807,13 @@
         data-string="wawdedwaw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wawdedwaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wawdedwaw</canvas>
   </details>
-      <p>Takes a number from the stack and computes its factorial, for example inputting 4 would return 4*3*2*1=24.</p>
+      <p>移除栈顶数，返回其阶乘。例如输入 4 则会返回 4 * 3 * 2 * 1 = 24。</p>
   </div>
 <br />
   <div id="patterns/hexal_maths@hexal:running/sum">
-<h4 class="pattern-title">Running Sum Prfn. ([num] → [num])<a
+<h4 class="pattern-title">前缀和之纯化 ([num] → [num])<a
     href="#patterns/hexal_maths@hexal:running/sum"
     class="permalink small"
     title="Permalink"
@@ -827,13 +827,13 @@
         data-string="aea"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aea</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aea</canvas>
   </details>
-      <p>Takes a list from the stack and computes its running sum, for example inputting [1,2,5] would return [1,3,8].</p>
+      <p>接受栈顶列表，并计算其前缀和。例如输入 [1, 2, 5] 则会返回 [1, 3, 8]。</p>
   </div>
 <br />
   <div id="patterns/hexal_maths@hexal:running/mul">
-<h4 class="pattern-title">Running Product Prfn. ([num] → [num])<a
+<h4 class="pattern-title">前缀积之纯化 ([num] → [num])<a
     href="#patterns/hexal_maths@hexal:running/mul"
     class="permalink small"
     title="Permalink"
@@ -847,14 +847,14 @@
         data-string="qaawaaq"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaawaaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaawaaq</canvas>
   </details>
-      <p>Takes a list from the stack and computes its running product, for example inputting [1,2,5] would return [1,2,10].</p>
+      <p>接受栈顶列表，并计算其前缀积。例如输入 [1, 2, 5] 则会返回 [1, 2, 10]。</p>
   </div>
 <br />
 </div>
 <div id="patterns/types">
-    <h3 class="entry-title page-header">Types<a
+    <h3 class="entry-title page-header">类型<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -864,7 +864,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/types@hexal:type/iota">
-<h4 class="pattern-title">Classifier&#39;s Purification (any → iotatype)<a
+<h4 class="pattern-title">分类学家之纯化 (any → iotatype)<a
     href="#patterns/types@hexal:type/iota"
     class="permalink small"
     title="Permalink"
@@ -878,13 +878,13 @@
         data-string="awd"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awd</canvas>
   </details>
-      <p>Remove an iota from the stack, and adds the type of that iota to the stack.</p>
+      <p>移除栈顶元素，并返回该 iota 的类型。</p>
   </div>
 <br />
   <div id="patterns/types@hexal:type/entity">
-<h4 class="pattern-title">Physician&#39;s Purification (entity → entitytype)<a
+<h4 class="pattern-title">内科医师之纯化 (entity → entitytype)<a
     href="#patterns/types@hexal:type/entity"
     class="permalink small"
     title="Permalink"
@@ -898,13 +898,13 @@
         data-string="qawde"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qawde</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qawde</canvas>
   </details>
-      <p>Remove an entity from the stack, and adds the type of the entity at that location to the stack.</p>
+      <p>移除栈顶实体，并返回该实体的类型。</p>
   </div>
 <br />
   <div id="patterns/types@hexal:type/block_item">
-<h4 class="pattern-title">Sorter&#39;s Purification (itemtypable → itemtype)<a
+<h4 class="pattern-title">分拣员之纯化 (itemtypable → itemtype)<a
     href="#patterns/types@hexal:type/block_item"
     class="permalink small"
     title="Permalink"
@@ -918,13 +918,13 @@
         data-string="qaqqaea"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaqqaea</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaqqaea</canvas>
   </details>
-      <p>Remove a location, <a href='#patterns/spells/motes'><span style='color: #b0b'>mote</span></a>, item entity, or item frame from the stack, and adds the type of the block at that location, or type of that item, to the stack (e.g. Grass, Stone, Stick, etc.).</p>
+      <p>移除栈顶位置向量，<a href='#patterns/spells/motes'><span style='color: #b0b'>物元</span></a>，物品实体或物品展示框。并返回该处方块的类型或对应物品类型。（如草方块、石头、木棍等。）</p>
   </div>
 <br />
   <div id="patterns/types@hexal:type/item_held">
-<h4 class="pattern-title">Sorter&#39;s Reflection (→ itemtype)<a
+<h4 class="pattern-title">分拣员之精思 (→ itemtype)<a
     href="#patterns/types@hexal:type/item_held"
     class="permalink small"
     title="Permalink"
@@ -938,13 +938,13 @@
         data-string="edeedqd"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edeedqd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edeedqd</canvas>
   </details>
-      <p>Adds the type of the item in the caster&#39;s offhand to the stack if there is one present, or the type of the casting hand otherwise.</p>
+      <p>若施法者副手中有物品，则将其类型压入栈顶；若无，则压入施法用手中物品的类型。</p>
   </div>
 <br />
   <div id="patterns/types@hexal:get_entity/type">
-<h4 class="pattern-title">Entity Distillation: Type (entitytype, pos → entity | null)<a
+<h4 class="pattern-title">实体之馏化：类型 (entitytype, pos → entity | null)<a
     href="#patterns/types@hexal:get_entity/type"
     class="permalink small"
     title="Permalink"
@@ -958,13 +958,13 @@
         data-string="dadqqqqqdad"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dadqqqqqdad</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dadqqqqqdad</canvas>
   </details>
-      <p>Remove an entity type and a position from the stack, and returns an entity of that type at that position if one exists.</p>
+      <p>从栈顶获取实体类型和位置向量，返回该位置符合该类型的实体（若有）。</p>
   </div>
 <br />
   <div id="patterns/types@hexal:zone_entity/type">
-<h4 class="pattern-title">Zone Exaltation: Type (entitytype, pos, num → [entity])<a
+<h4 class="pattern-title">区域之提整：类型 (entitytype, pos, num → [entity])<a
     href="#patterns/types@hexal:zone_entity/type"
     class="permalink small"
     title="Permalink"
@@ -978,13 +978,13 @@
         data-string="waweeeeewaw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: waweeeeewaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：waweeeeewaw</canvas>
   </details>
-      <p>Remove an entity type, a position, and a radius from the stack, and returns a list of all entities of that type within that radius of that position.</p>
+      <p>从栈顶获取实体类型、位置向量及最大距离，返回该位置给定距离范围内所有符合给定类型的实体的列表。</p>
   </div>
 <br />
   <div id="patterns/types@hexal:zone_entity/not_type">
-<h4 class="pattern-title">Zone Exaltation: Not-Type (entitytype, pos, num → [entity])<a
+<h4 class="pattern-title">区域之提整：非类型 (entitytype, pos, num → [entity])<a
     href="#patterns/types@hexal:zone_entity/not_type"
     class="permalink small"
     title="Permalink"
@@ -998,15 +998,15 @@
         data-string="wdwqqqqqwdw"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wdwqqqqqwdw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wdwqqqqqwdw</canvas>
   </details>
-      <p>Remove an entity type, a position, and a radius from the stack, and returns a list of all entities not of that type within that radius of that position</p>
+      <p>从栈顶获取实体类型、位置向量及最大距离，返回该位置给定距离范围内所有不符合给定类型的实体的列表。</p>
   </div>
 <br />
 </div>
 <div id="patterns/everbook">
     <div class="spoilered">
-      <h3 class="entry-title page-header">Everbook<a
+      <h3 class="entry-title page-header">永恒之书<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1015,10 +1015,10 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>Your Everbook is a strange space that your broken mind can now reach. There are many yous that seem to share this record, worlds and worlds of progress, beginning again and again. Your Everbook can store patterns paired with iotas like an <a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>Akashic Record</span></a>, though the fragile nature of your mind these days makes it best to route all access to your Everbook through an <a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>Akashic Record</span></a>. Any world that you reach enlightenment in, you will have access to the entries you add to it now.</p>
+    <p>永恒之书是一片奇特的空间，如今已对我残破的意识开放。似乎有许多个我共用所有永恒之书的记录，共享不同世界的研究成果，又不断重新研究。永恒之书能够将图案和 iota 对应并存储，和<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>类似。不过考虑到如今我意识的脆弱，可能还是把永恒之书的访问权限全部交给<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>比较好。只要在某个世界中获得启迪，我就能在那个世界中访问永恒之书的所有内容。</p>
 <br />
   <div id="patterns/everbook@hexal:everbook/read">
-<h4 class="pattern-title">Mnemosyne&#39;s Gambit (vector, pattern →)<a
+<h4 class="pattern-title">谟涅摩叙涅之策略 (vector, pattern →)<a
     href="#patterns/everbook@hexal:everbook/read"
     class="permalink small"
     title="Permalink"
@@ -1032,13 +1032,13 @@
         data-string="eweeewedqdeddw"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eweeewedqdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eweeewedqdeddw</canvas>
   </details>
-      <p>Takes the position of an <a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>Akashic Record</span></a>, as well as a Pattern as a key, and retrieves the iota at that key from your Everbook, storing it in the given <a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>Akashic Record</span></a> if able.</p>
+      <p>接受指向<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>的位置向量，与一个作为密钥的图案，并返回永恒之书中对应密钥处的 iota，若能存储则同时会将其存至给定的<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>中。</p>
   </div>
 <br />
   <div id="patterns/everbook@hexal:everbook/write">
-<h4 class="pattern-title">Elysium&#39;s Gambit (vector, pattern →)<a
+<h4 class="pattern-title">极乐园之策略 (vector, pattern →)<a
     href="#patterns/everbook@hexal:everbook/write"
     class="permalink small"
     title="Permalink"
@@ -1052,13 +1052,13 @@
         data-string="qwqqqwqaeaqaaw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qwqqqwqaeaqaaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwqqqwqaeaqaaw</canvas>
   </details>
-      <p>Takes the position of an <a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>Akashic Record</span></a>, as well as a Pattern as a key, and stores the iota in that record at that key to your Everbook at the same key.</p>
+      <p>接受指向<a href='https://object-object.github.io/HexMod/v/0.10.3#greatwork/akashiclib'><span style='color: #b0b'>阿卡夏记录</span></a>的位置向量，与一个作为密钥的图案，并将阿卡夏记录中该图案对应的 iota 以同一图案存至永恒之书中。</p>
   </div>
 <br />
   <div id="patterns/everbook@hexal:everbook/delete">
-<h4 class="pattern-title">Lethe&#39;s Gambit (pattern →)<a
+<h4 class="pattern-title">忘川之策略 (pattern →)<a
     href="#patterns/everbook@hexal:everbook/delete"
     class="permalink small"
     title="Permalink"
@@ -1072,13 +1072,13 @@
         data-string="qwqqqwqaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qwqqqwqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwqqqwqaww</canvas>
   </details>
-      <p>Takes a pattern and removes the entry with that pattern key from your Everbook.</p>
+      <p>接受一个图案，并移除永恒之书中该图案对应的条目。</p>
   </div>
 <br />
   <div id="patterns/everbook@hexal:everbook/toggle_macro">
-<h4 class="pattern-title">Brigh&#39;s Gambit (pattern →)<a
+<h4 class="pattern-title">布莱之策略 (pattern →)<a
     href="#patterns/everbook@hexal:everbook/toggle_macro"
     class="permalink small"
     title="Permalink"
@@ -1092,18 +1092,18 @@
         data-string="eweeewedww"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eweeewedww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eweeewedww</canvas>
   </details>
-      <p>Takes a pattern and marks that entry of your Everbook as a Pattern that when drawn by your hand will be treated as any other of Nature&#39;s patterns.</p>
+      <p>接受一个图案，并以该图案标记永恒之书中对应条目，使得绘制该图案所产生的效果和自然创造的其他图案相仿。</p>
   </div>
 <br />
-    <p>When you draw the key of an Everbook entry that has been marked as a Pattern, if that entry is a list Nature will execute each element of the list as it would with <a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>Hermes&#39; Gambit</span></a>, though it does not use up an evaluation. Attempting to mark an entry as a Pattern if it is non-existent or infinitely recursive will fail.</p>
+    <p>当绘制被标记的永恒之书条目所对应的图案时，如果对应条目存有一个列表，则自然会如同<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>赫尔墨斯之策略</span></a>一样依次执行列表中各元素，但不会消耗递归层数。试图将不存在的条目或是会无限递归的条目标记为图案则会失败。</p>
 <br />
     </div>
 </div>
 <div id="patterns/everbook_entries">
     <div class="spoilered">
-      <h3 class="entry-title page-header">Everbook Entries<a
+      <h3 class="entry-title page-header">永恒之书条目<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1112,13 +1112,13 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>Every page in this entry displays the pattern key for one of the entries of your <a href='#patterns/everbook'><span style='color: #fc77be'>Everbook</span></a>.</p>
+    <p>此条目中每一页都会显示我<a href='#patterns/everbook'><span style='color: #fc77be'>永恒之书</span></a>中某一条目对应的图案密钥。</p>
 <br />
     </div>
 </div>
 </section>
 <section id="patterns/spells">
-    <h2 class="category-title page-header">Spells<a
+    <h2 class="category-title page-header">hexcasting.entry.spells<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1127,9 +1127,9 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h2>
-    <p>Patterns and actions that perform a magical effect on the world.</p>
+    <p>hexcasting.entry.spells.desc</p>
 <div id="patterns/spells/hexal_spells">
-    <h3 class="entry-title page-header">Hexal Spells<a
+    <h3 class="entry-title page-header">咒法拓展：法术<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1139,7 +1139,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/spells/hexal_spells@hexal:smelt">
-<h4 class="pattern-title">Smelt (vec | entity | mote →)<a
+<h4 class="pattern-title">烧炼 (vec | entity | mote →)<a
     href="#patterns/spells/hexal_spells@hexal:smelt"
     class="permalink small"
     title="Permalink"
@@ -1153,15 +1153,15 @@
         data-string="wqqqwqqadad"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wqqqwqqadad</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wqqqwqqadad</canvas>
   </details>
-      <p>Remove a location, item entity, or mote from the stack, then either smelt the block at the location or smelt all the items in the item entity or mote.</p>
+      <p>移除栈顶位置向量、物品实体或物元，然后烧炼该处方块，或同时烧炼物品实体或物元中所有物品。</p>
   </div>
 <br />
-    <p>Costs three quarters of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> per item smelted (i.e. three quarters of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> for smelting a block, 6 <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> to smelt a stack of 8 items.)</p>
+    <p>每烧炼一个物品消耗 3/4 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。（也即烧炼 1 个方块消耗 3/4 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>，同时烧炼 8 个物品消耗 6 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。）</p>
 <br />
   <div id="patterns/spells/hexal_spells@hexal:freeze">
-<h4 class="pattern-title">Freeze (vec →)<a
+<h4 class="pattern-title">冻结 (vec →)<a
     href="#patterns/spells/hexal_spells@hexal:freeze"
     class="permalink small"
     title="Permalink"
@@ -1175,13 +1175,13 @@
         data-string="weeeweedada"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: weeeweedada</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：weeeweedada</canvas>
   </details>
-      <p>Freezes the block at a block location. For example, turns water into ice, and ice into packed ice. Costs one <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>冻结所给坐标处方块。例如，水变为冰，冰变为浮冰。消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/hexal_spells@hexal:falling_block">
-<h4 class="pattern-title">Falling Block (vec →)<a
+<h4 class="pattern-title">坠落方块 (vec →)<a
     href="#patterns/spells/hexal_spells@hexal:falling_block"
     class="permalink small"
     title="Permalink"
@@ -1195,13 +1195,13 @@
         data-string="wqwawqwqwqwqwqw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wqwawqwqwqwqwqw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wqwawqwqwqwqwqw</canvas>
   </details>
-      <p>Remove a location from the stack, and force the block there to fall as if it were sand or gravel. Costs one and a half <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>移除栈顶位置向量，并使该处方块下落，就像沙子和沙砾一样。消耗 3/2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/hexal_spells@hexal:place_type">
-<h4 class="pattern-title">Place Block II ((itemtype | mote), vec →)<a
+<h4 class="pattern-title">放置方块，第二型 ((itemtype | mote), vec →)<a
     href="#patterns/spells/hexal_spells@hexal:place_type"
     class="permalink small"
     title="Permalink"
@@ -1215,13 +1215,13 @@
         data-string="eeeeedeeeee"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeedeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeedeeeee</canvas>
   </details>
-      <p>Accepts an item type or mote and a location, and attempts to place a block of that item type at that location. If a mote was passed it will instead place from the record referenced by that mote. Costs an eighth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>接受一个物品类型或物元和一个位置向量，并会尝试在该位置处放置所给物品类型的方块。若传入物元，则会从对应的物元记录中放置。消耗 1/8 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/hexal_spells@hexal:particles">
-<h4 class="pattern-title">Particles (vec | [vec] →)<a
+<h4 class="pattern-title">粒子 (vec | [vec] →)<a
     href="#patterns/spells/hexal_spells@hexal:particles"
     class="permalink small"
     title="Permalink"
@@ -1235,14 +1235,14 @@
         data-string="eqqqqa"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqqqqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqqqqa</canvas>
   </details>
-      <p>Accepts a location or a list of locations, and either creates a particle at the location, or creates lines of particles between the locations in the list. Costs two thousandths of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> per location.</p>
+      <p>接受一个位置向量或一个由位置向量组成的列表，并在所给位置处生成粒子，或在所给列表各位置之间生成粒子连线。每个位置向量消耗 1/500 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
 </div>
 <div id="patterns/spells/wisps">
-    <h3 class="entry-title page-header">Wisps<a
+    <h3 class="entry-title page-header">咒灵<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1251,12 +1251,12 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>I have discovered a way to create constructs from the media itself, visible to others and able to move and act somewhat on their own. They are able to cast hexes in my place, similar to how a <a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>Hermes&#39; Gambit</span></a> evaluates patterns. They do take some of my attention to operate this however, and if too many try and execute at once I will only be able to run some of them, leaving the rest for the next instant.</p>
+    <p>我发现了一种能仅以媒质创造法术构造体的方式，它们能被他人看见，能移动，也有一定自主行动能力。它们能代替我施法，和<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/meta@hexcasting:eval'><span style='color: #fc77be'>赫尔墨斯之策略</span></a>类似。不过保持它们的形态确实要耗费我的注意力，而且如果太多咒灵要同时施法，我也只能同时运行其中一部分，剩下的则要稍作延迟。</p>
 <br />
-    <p>When they are created I assign them a &#39;reservoir&#39; of media that they have access to, which is taken from me and used to form the wisp. A wisp uses up part of its reservoir simply existing, and when it evaluates the pattern list it is carrying any costs incurred are removed from its reservoir. All wisps seem to take three <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> to summon, in addition to whatever media is used for their reservoir.</p>
+    <p>创造咒灵时需要给它们分配它们能访问的一块媒质“池”。这些媒质由我提供，用于形成咒灵本身。咒灵会常态消耗媒质，而当其运行其携带的图案列表时，其中各操作要消耗的媒质也会从媒质池中抽取。所有种类的咒灵似乎都需要 3 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>才能召唤，并同时消耗等同于其媒质池容量的媒质。</p>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/summon/projectile">
-<h4 class="pattern-title">Summon Projectile Wisp ([pattern], vec, vec, number →)<a
+<h4 class="pattern-title">召唤弹射式咒灵 ([pattern], vec, vec, number →)<a
     href="#patterns/spells/wisps@hexal:wisp/summon/projectile"
     class="permalink small"
     title="Permalink"
@@ -1270,15 +1270,15 @@
         data-string="aqaeqeeeee"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaeqeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaeqeeeee</canvas>
   </details>
-      <p>This wisp is summoned and launched like an arrow, casting its hex on whatever it hits. The initial stack when it executes will be a reference to itself, then a reference to what it hit.</p>
+      <p>这种咒灵被召唤时会像箭一样被弹射出去，而后会在其击中的事物上施放咒术。其初始栈包含一个代表其自身的 iota 和一个代表其击中的事物的 iota。</p>
   </div>
 <br />
-    <p>This could be a block position or an entity reference. The first vector accepted is the location the wisp will be summoned, while the direction of the second is the direction the wisp will be launched, and the second&#39;s magnitude seems to affect the wisp&#39;s velocity. The cost of the spell increases with the squared magnitude of velocity. The number accepted determines the wisp&#39;s reservoir in <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>. It loses approximately 3 tenths of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> of media every second once summoned, and has a range of influence of 4 blocks.</p>
+    <p>第二个 iota 可以是一个位置向量，也可以是一个实体。第二个向量的模似乎会影响咒灵的速度，此法术消耗的媒质量会以速度向量模的平方增加。接受的数代表咒灵媒质池的容量（以<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>计）。召唤后它每秒会消耗 3/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>，且其影响区域半径为 4 格。</p>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/summon/ticking">
-<h4 class="pattern-title">Summon Cyclic Wisp ([pattern], vec, number →)<a
+<h4 class="pattern-title">召唤循环式咒灵 ([pattern], vec, number →)<a
     href="#patterns/spells/wisps@hexal:wisp/summon/ticking"
     class="permalink small"
     title="Permalink"
@@ -1292,15 +1292,15 @@
         data-string="aqaweewaqawee"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaweewaqawee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaweewaqawee</canvas>
   </details>
-      <p>Similar to Summon Projectile Wisp, but with only one vector input for the position to summon the wisp. Cyclic wisps are unmoving once summoned, instead executing their hex up to 20 times each second.</p>
+      <p>此法术与召唤弹射式咒灵类似，但只会接受一个代表召唤位置的向量。循环式咒灵一经召唤就不再移动，并会以每秒 20 次的频率施法。</p>
   </div>
 <br />
-    <p>The first time it casts the stack will start with a reference to itself, from which point it will always start with the stack and ravenmind in the state they finished on the last cast. This wisp has a less stable form making it lose significantly more media every second, losing approximately seven tenths of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> per second once summoned. It has a range of influence of 8 blocks.</p>
+    <p>其初始栈包含一个代表其自身的 iota，而后每次施法开始时会保留上一次施法后的栈和渡鸦之思。这种咒灵的形态较不稳定，常态消耗率远大于弹射式咒灵。其每秒消耗 7/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。其影响区域半径为 8 格。</p>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/self">
-<h4 class="pattern-title">Identity Reflection (→ entity)<a
+<h4 class="pattern-title">自我之精思 (→ entity)<a
     href="#patterns/spells/wisps@hexal:wisp/self"
     class="permalink small"
     title="Permalink"
@@ -1314,13 +1314,13 @@
         data-string="dedwqqwdedwqqaw"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dedwqqwdedwqqaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dedwqqwdedwqqaw</canvas>
   </details>
-      <p>Add a reference to the casting wisp to the stack. This must be cast by a wisp; trying to cast it through a staff will fail rather spectacularly.</p>
+      <p>返回一个代表施法咒灵的 iota。此操作必须由咒灵执行。尝试用法杖执行会招致可怖的事故。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/media">
-<h4 class="pattern-title">Reservoir Reflection (→ num)<a
+<h4 class="pattern-title">储罐之精思 (→ num)<a
     href="#patterns/spells/wisps@hexal:wisp/media"
     class="permalink small"
     title="Permalink"
@@ -1334,13 +1334,13 @@
         data-string="aqaweewaqaweedw"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaweewaqaweedw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaweewaqaweedw</canvas>
   </details>
-      <p>Add the amount of media in the wisp&#39;s reservoir to the stack. This must be cast by a wisp; trying to cast it through a staff will fail rather spectacularly.</p>
+      <p>将咒灵媒质池中剩余的媒质量压入栈顶。此操作必须由咒灵执行。尝试用法杖执行会招致可怖的事故。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/hex">
-<h4 class="pattern-title">Manager&#39;s Purification (entity → [pattern])<a
+<h4 class="pattern-title">经理之纯化 (entity → [pattern])<a
     href="#patterns/spells/wisps@hexal:wisp/hex"
     class="permalink small"
     title="Permalink"
@@ -1354,13 +1354,13 @@
         data-string="aweewaqaweewaawww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweewaqaweewaawww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweewaqaweewaawww</canvas>
   </details>
-      <p>Removes a reference to a wisp from the stack, and replaces it with the wisp&#39;s contained hex. Must be a wisp you summoned, or a wisp that has <a href='#patterns/spells/wisps@hexal:wisp/transfer/allow'>allowed<span style='color: #fc77be'> transfer with the caster or caster&#39;s owner.</span></a></p>
+      <p>移除一个咒灵实体，并返回该咒灵所携带的咒术。所给 iota 必须代表由我召唤的咒灵。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/owner">
-<h4 class="pattern-title">Allegiance Distillation (entity, entity → bool)<a
+<h4 class="pattern-title">效忠之馏化 (entity, entity → bool)<a
     href="#patterns/spells/wisps@hexal:wisp/owner"
     class="permalink small"
     title="Permalink"
@@ -1374,13 +1374,13 @@
         data-string="dwqqwdedwqqwddwww"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dwqqwdedwqqwddwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dwqqwdedwqqwddwww</canvas>
   </details>
-      <p>Removes a reference to a wisp and an entity from the stack, and returns true if that entity owns that wisp, and false otherwise.</p>
+      <p>移除一个咒灵实体和一个实体，若该实体是该咒灵的所有者，返回 True；否则返回 False。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/move/target/set">
-<h4 class="pattern-title">Pathfinder&#39;s Gambit (vec →)<a
+<h4 class="pattern-title">开拓者之策略 (vec →)<a
     href="#patterns/spells/wisps@hexal:wisp/move/target/set"
     class="permalink small"
     title="Permalink"
@@ -1394,13 +1394,13 @@
         data-string="awqwawqaw"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awqwawqaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awqwawqaw</canvas>
   </details>
-      <p>Removes a position vector from the stack; The Cyclic Wisp that executed this pattern will move in a straight line towards that position (colliding with terrain in its path) until it reaches it.</p>
+      <p>移除栈顶位置向量。运行此图案的循环式咒灵会沿直线移动至所给位置（会与途中地形地貌等碰撞），直至抵达该位置处。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/move/target/get">
-<h4 class="pattern-title">Pathfinder&#39;s Reflection (→ vec)<a
+<h4 class="pattern-title">开拓者之精思 (→ vec)<a
     href="#patterns/spells/wisps@hexal:wisp/move/target/get"
     class="permalink small"
     title="Permalink"
@@ -1414,13 +1414,13 @@
         data-string="ewdwewdew"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: ewdwewdew</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：ewdwewdew</canvas>
   </details>
-      <p>Adds to the stack the position vector that the executing Cyclic Wisp is currently moving towards.</p>
+      <p>返回循环式咒灵自身当前目标位置的位置向量。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/move/speed/set">
-<h4 class="pattern-title">Haste (num →)<a
+<h4 class="pattern-title">急速 (num →)<a
     href="#patterns/spells/wisps@hexal:wisp/move/speed/set"
     class="permalink small"
     title="Permalink"
@@ -1434,13 +1434,13 @@
         data-string="aeawqqqae"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aeawqqqae</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aeawqqqae</canvas>
   </details>
-      <p>Removes a number from the stack, and sets the executing Cyclic Wisp&#39;s maximum speed to that number.</p>
+      <p>移除栈顶数，并将循环式咒灵自身的速度上限设为该数。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/move/speed/get">
-<h4 class="pattern-title">Speedometer&#39;s Reflection (→ num)<a
+<h4 class="pattern-title">速度计之精思 (→ num)<a
     href="#patterns/spells/wisps@hexal:wisp/move/speed/get"
     class="permalink small"
     title="Permalink"
@@ -1454,13 +1454,13 @@
         data-string="eeewdqdee"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeewdqdee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeewdqdee</canvas>
   </details>
-      <p>Gets the executing Cyclic Wisp&#39;s current maximum speed.</p>
+      <p>返回循环式咒灵自身当前速度上限。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/transfer/allow">
-<h4 class="pattern-title">Allow Transfer (num →)<a
+<h4 class="pattern-title">允许转送 (num →)<a
     href="#patterns/spells/wisps@hexal:wisp/transfer/allow"
     class="permalink small"
     title="Permalink"
@@ -1474,13 +1474,13 @@
         data-string="qqqqqewwqeeeee"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqewwqeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqewwqeeeee</canvas>
   </details>
-      <p>When two wisps are <a href='#patterns/spells/links'><span style='color: #8d6acc'>linked</span></a> together, they transfer media between each other until they are balanced. By default this only happens between wisps with the same owner. This takes an index, and explicitly allows the wisp to exchange media with the linkable at that index.</p>
+      <p>当两咒灵<a href='#patterns/spells/links'><span style='color: #8d6acc'>连接</span></a>时，它们会相互转送媒质，直至两者平衡。默认状况下，仅所有者相同的咒灵会自发转送。此操作接受一个编号数，并显式允许咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/transfer/disallow">
-<h4 class="pattern-title">Disallow Transfer (num →)<a
+<h4 class="pattern-title">禁止转送 (num →)<a
     href="#patterns/spells/wisps@hexal:wisp/transfer/disallow"
     class="permalink small"
     title="Permalink"
@@ -1494,13 +1494,13 @@
         data-string="qqqqqeqdeddweqqqqq"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqeqdeddweqqqqq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqeqdeddweqqqqq</canvas>
   </details>
-      <p>Correspondingly, this takes an index and disallows the wisp from exchanging media with the linkable at that index.</p>
+      <p>相应地，此操作接受一个编号数，并禁止咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/transfer/others/allow">
-<h4 class="pattern-title">Allow Transfer Others (wisp, num →)<a
+<h4 class="pattern-title">允许实体转送 (wisp, num →)<a
     href="#patterns/spells/wisps@hexal:wisp/transfer/others/allow"
     class="permalink small"
     title="Permalink"
@@ -1514,13 +1514,13 @@
         data-string="eeeeeqwweqqqqq"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeeqwweqqqqq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeeqwweqqqqq</canvas>
   </details>
-      <p>This takes a wisp that you own and an index, and allows the wisp to exchange media with the linkable at that index.</p>
+      <p>接受一个咒灵实体（所有者需是我）和一个编号数，并禁止该咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/transfer/others/disallow">
-<h4 class="pattern-title">Disallow Transfer Others (wisp, num →)<a
+<h4 class="pattern-title">禁止实体转送 (wisp, num →)<a
     href="#patterns/spells/wisps@hexal:wisp/transfer/others/disallow"
     class="permalink small"
     title="Permalink"
@@ -1534,13 +1534,13 @@
         data-string="eeeeeqeaqaawqeeeee"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeeqeaqaawqeeeee</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeeqeaqaawqeeeee</canvas>
   </details>
-      <p>This takes a wisp that you own and an index, and disallows the wisp from exchanging media with the linkable at that index.</p>
+      <p>接受一个咒灵实体（所有者需是我）和一个编号数，并允许该咒灵与该编号链接另一端的事物交换媒质。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:get_entity/wisp">
-<h4 class="pattern-title">Entity Prfn.: Wisp (vec → entity | null)<a
+<h4 class="pattern-title">实体之纯化：咒灵 (vec → entity | null)<a
     href="#patterns/spells/wisps@hexal:get_entity/wisp"
     class="permalink small"
     title="Permalink"
@@ -1554,13 +1554,13 @@
         data-string="qqwdedwqqdaqaaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqwdedwqqdaqaaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqwdedwqqdaqaaww</canvas>
   </details>
-      <p>Transform the position on the stack into the wisp at that location (or <a href='https://object-object.github.io/HexMod/v/0.10.3#casting/influences'><span style='color: #8d6acc'>Null</span></a> if there isn&#39;t one).</p>
+      <p>将栈顶位置向量变为该处咒灵（若无则返回 <a href='https://object-object.github.io/HexMod/v/0.10.3#casting/influences'><span style='color: #8d6acc'>Null</span></a>）。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:zone_entity/wisp">
-<h4 class="pattern-title">Zone Dstl.: Wisp (vec, num → [entity])<a
+<h4 class="pattern-title">区域之馏化：咒灵 (vec, num → [entity])<a
     href="#patterns/spells/wisps@hexal:zone_entity/wisp"
     class="permalink small"
     title="Permalink"
@@ -1574,13 +1574,13 @@
         data-string="qqwdedwqqwdeddww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqwdedwqqwdeddww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqwdedwqqwdeddww</canvas>
   </details>
-      <p>Take a position and maximum distance on the stack, and combine them into a list of wisps near the position.</p>
+      <p>从栈顶获取位置及最大距离，返回该位置给定距离范围内所有咒灵的列表。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:zone_entity/not_wisp">
-<h4 class="pattern-title">Zone Dstl.: Non-Wisp (vec, num → [entity])<a
+<h4 class="pattern-title">区域之馏化：非咒灵 (vec, num → [entity])<a
     href="#patterns/spells/wisps@hexal:zone_entity/not_wisp"
     class="permalink small"
     title="Permalink"
@@ -1594,13 +1594,13 @@
         data-string="eewaqaweewaqaaww"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eewaqaweewaqaaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eewaqaweewaqaaww</canvas>
   </details>
-      <p>Take a position and maximum distance on the stack, and combine them into a list of non-wisp entities near the position.</p>
+      <p>从栈顶获取位置及最大距离，返回该位置给定距离范围内所有非咒灵实体的列表。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/trigger/tick">
-<h4 class="pattern-title">Delay Wisp (number →)<a
+<h4 class="pattern-title">延迟咒灵 (number →)<a
     href="#patterns/spells/wisps@hexal:wisp/trigger/tick"
     class="permalink small"
     title="Permalink"
@@ -1614,13 +1614,13 @@
         data-string="aqawded"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqawded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqawded</canvas>
   </details>
-      <p>Removes an integer from the stack, then delays the wisp&#39;s next cast until at least that many twentieth&#39;s of a second have passed. This and other triggers like it will halve the wisp&#39;s upkeep cost while it isn&#39;t casting.</p>
+      <p>移除栈顶数，然后将咒灵下一次施法时刻延迟所给数个 1/20 秒。所有可用于延迟咒灵施法的操作均能使咒灵的常态消耗减半，直到下一次施法为止。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/trigger/comm">
-<h4 class="pattern-title">Listen<a
+<h4 class="pattern-title">监听<a
     href="#patterns/spells/wisps@hexal:wisp/trigger/comm"
     class="permalink small"
     title="Permalink"
@@ -1634,13 +1634,13 @@
         data-string="aqqqqqwdeddw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqqqqqwdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqqqqqwdeddw</canvas>
   </details>
-      <p>The wisp&#39;s next cast will not occur until it has received at least one <a href='#patterns/spells/links@hexal:link/comm/send'><span style='color: #fc77be'>communication</span></a>.</p>
+      <p>咒灵将在其收到至少一次<a href='#patterns/spells/links@hexal:link/comm/send'><span style='color: #fc77be'>通信</span></a>后才进行下一次施法。</p>
   </div>
 <br />
   <div id="patterns/spells/wisps@hexal:wisp/trigger/move">
-<h4 class="pattern-title">Wander<a
+<h4 class="pattern-title">巡航<a
     href="#patterns/spells/wisps@hexal:wisp/trigger/move"
     class="permalink small"
     title="Permalink"
@@ -1654,14 +1654,14 @@
         data-string="eqwawqwaqww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqwawqwaqww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqwawqwaqww</canvas>
   </details>
-      <p>The wisp&#39;s next cast will not occur until it has reached the position it is <a href='#patterns/spells/wisps@hexal:wisp/move/target/set'><span style='color: #fc77be'>navigating</span></a> towards.</p>
+      <p>咒灵将在其抵达被<a href='#patterns/spells/wisps@hexal:wisp/move/target/set'><span style='color: #fc77be'>导向</span></a>的位置后才进行下一次施法。</p>
   </div>
 <br />
 </div>
 <div id="patterns/spells/links">
-    <h3 class="entry-title page-header">Links<a
+    <h3 class="entry-title page-header">链接<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1670,12 +1670,12 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>These patterns outline a system that I have found for communicating information from one <a href='#patterns/spells/wisps'><span style='color: #8d6acc'>wisp</span></a> to another, among other things. There are a number of patterns related to creating these links, and a number of patterns related to sending and receiving iotas over a link once it is created. A wisp can have any number of links active, with each costing a negligible amount of media to maintain each twentieth of a second.</p>
+    <p>这些图案大致构建了一套能在<a href='#patterns/spells/wisps'><span style='color: #8d6acc'>咒灵</span></a>间以及咒灵和其他事物间传递信息的系统。有若干图案与创建链接有关，也有些图案和通过链接发送和接收 iota 的方式相关。一个咒灵能同时维持任意数目的链接，每条每 1/20 秒常态消耗极少量媒质。</p>
 <br />
-    <p>The links of a given linkable are indexed by the order they are created, with this number used by a number of patterns. &#34;Linkable&#34; is not its own type, but a shorthand for any type that can be coerced into a linkable (e.g. Entity -&gt; Linkable entities, Vec -&gt; Linkable blocks, ...). Links can span up to double the sum of the two linkable&#39;s ranges. To connect linkables over truly vast distances I would do well to look into building some <a href='#items/relay'><span style='color: #b0b'>Relays</span></a>.</p>
+    <p>可链接事物会以创建顺序为这些链接编号，此编号可用作图案的参数。介绍中的“可链接事物”不是具体参数类型，而是指代所有可被转换为可链接事物的类型。（例如，Entity -&gt; Linkable entities，Vec -&gt; Linkable blocks等等。）链接仅会在两可链接事物影响范围之和的两倍内起效。若要跨更远的距离连接两者，应该转而使用<a href='#items/relay'><span style='color: #b0b'>继链器</span></a>。</p>
 <br />
   <div id="patterns/spells/links@hexal:link">
-<h4 class="pattern-title">Link (linkable →)<a
+<h4 class="pattern-title">链接 (linkable →)<a
     href="#patterns/spells/links@hexal:link"
     class="permalink small"
     title="Permalink"
@@ -1689,13 +1689,13 @@
         data-string="eaqaaeqqqqqaweaqaaw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eaqaaeqqqqqaweaqaaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eaqaaeqqqqqaweaqaaw</canvas>
   </details>
-      <p>Links the caster to the entity removed from the stack, which must be linkable. This costs one <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Shard</span></a>.</p>
+      <p>将施法者链接至栈顶实体，且实体必须为可链接的。消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/others">
-<h4 class="pattern-title">Link Others (linkable, linkable →)<a
+<h4 class="pattern-title">链接实体 (linkable, linkable →)<a
     href="#patterns/spells/links@hexal:link/others"
     class="permalink small"
     title="Permalink"
@@ -1709,13 +1709,13 @@
         data-string="eqqqqqawqeeeeedww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqqqqqawqeeeeedww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqqqqqawqeeeeedww</canvas>
   </details>
-      <p>May be evaluated by any casting instrument. Links two entities, which must be linkable. This costs one <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Shard</span></a>.</p>
+      <p>可在任意施法器件上运行。将两个实体链接，且两实体必须均为可链接的。消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/unlink">
-<h4 class="pattern-title">Unlink (num →)<a
+<h4 class="pattern-title">解链接 (num →)<a
     href="#patterns/spells/links@hexal:link/unlink"
     class="permalink small"
     title="Permalink"
@@ -1729,13 +1729,13 @@
         data-string="qdeddqeeeeedwqdeddw"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qdeddqeeeeedwqdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qdeddqeeeeedwqdeddw</canvas>
   </details>
-      <p>Removes the link at the given index from the caster&#39;s links. This costs two <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>断开施法者的编号为所给数的链接。消耗 2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/unlink/others">
-<h4 class="pattern-title">Unlink Others (linkable, linkable →)<a
+<h4 class="pattern-title">解链接实体 (linkable, linkable →)<a
     href="#patterns/spells/links@hexal:link/unlink/others"
     class="permalink small"
     title="Permalink"
@@ -1749,13 +1749,13 @@
         data-string="qeeeeedweqqqqqaww"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qeeeeedweqqqqqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qeeeeedweqqqqqaww</canvas>
   </details>
-      <p>Takes two linkables and unlinks them if they are linked. This costs two <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>接受两个可链接事物，若其间存在链接，则会将其断开。消耗 2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/get">
-<h4 class="pattern-title">Phonebook Purification (num → linkable)<a
+<h4 class="pattern-title">电话簿之纯化 (num → linkable)<a
     href="#patterns/spells/links@hexal:link/get"
     class="permalink small"
     title="Permalink"
@@ -1769,13 +1769,13 @@
         data-string="eqqqqqaww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eqqqqqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eqqqqqaww</canvas>
   </details>
-      <p>Removes an index from the stack, and adds the entity connected to the link at that index to the stack.</p>
+      <p>移除栈顶数，并返回对应编号的链接所连的实体。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/get_index">
-<h4 class="pattern-title">Recognition Purification (linkable → num)<a
+<h4 class="pattern-title">识别之纯化 (linkable → num)<a
     href="#patterns/spells/links@hexal:link/get_index"
     class="permalink small"
     title="Permalink"
@@ -1789,13 +1789,13 @@
         data-string="aeqqqqqawwd"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aeqqqqqawwd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aeqqqqqawwd</canvas>
   </details>
-      <p>Removes an entity from the stack, and adds the index to the link to that entity to the stack (or -1 if the caster isn&#39;t linked to that entity).</p>
+      <p>移除栈顶实体，并返回自身与该实体相连的链接的编号。若施法者与其无链接则返回 -1。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/num">
-<h4 class="pattern-title">Popularity Reflection (→ num)<a
+<h4 class="pattern-title">名气之精思 (→ num)<a
     href="#patterns/spells/links@hexal:link/num"
     class="permalink small"
     title="Permalink"
@@ -1809,13 +1809,13 @@
         data-string="qeeeeedww"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qeeeeedww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qeeeeedww</canvas>
   </details>
-      <p>Adds the number of links to the wisp to the stack.</p>
+      <p>返回自身的链接个数。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/comm/send">
-<h4 class="pattern-title">Send Iota (num, any →)<a
+<h4 class="pattern-title">发送Iota (num, any →)<a
     href="#patterns/spells/links@hexal:link/comm/send"
     class="permalink small"
     title="Permalink"
@@ -1829,13 +1829,13 @@
         data-string="qqqqqwdeddw"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqwdeddw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqwdeddw</canvas>
   </details>
-      <p>Removes an iota from the stack, then removes an index from the stack and sends the iota along the link at the given index.  This costs one hundredth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>移除栈顶元素与数，而后向编号为该数的链接发送该元素。消耗 1/100 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/comm/read">
-<h4 class="pattern-title">Recitation Reflection (→ any)<a
+<h4 class="pattern-title">朗诵之精思 (→ any)<a
     href="#patterns/spells/links@hexal:link/comm/read"
     class="permalink small"
     title="Permalink"
@@ -1849,13 +1849,13 @@
         data-string="weeeeew"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: weeeeew</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：weeeeew</canvas>
   </details>
-      <p>When something receives an iota along a link it is added to a queue. This pattern adds the first iota in the queue to the stack, removing it from the queue.</p>
+      <p>当接收到 iota 时其将被加至一个队列中。此图案会将该队列中的首个 iota 压入栈顶并移出队列。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/comm/num">
-<h4 class="pattern-title">Postmaster&#39;s Reflection (→ num)<a
+<h4 class="pattern-title">邮政局长之精思 (→ num)<a
     href="#patterns/spells/links@hexal:link/comm/num"
     class="permalink small"
     title="Permalink"
@@ -1869,13 +1869,13 @@
         data-string="aweeeeewaa"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweeeeewaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweeeeewaa</canvas>
   </details>
-      <p>Adds to the stack the number of unread iota in the caster&#39;s received iota queue.</p>
+      <p>返回接收队列中未读 iota 的个数。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/comm/clear">
-<h4 class="pattern-title">Unclogging Gambit<a
+<h4 class="pattern-title">除塞之策略<a
     href="#patterns/spells/links@hexal:link/comm/clear"
     class="permalink small"
     title="Permalink"
@@ -1889,13 +1889,13 @@
         data-string="aweeeeewa"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweeeeewa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweeeeewa</canvas>
   </details>
-      <p>Removes all unread iota from the caster&#39;s received iota queue.</p>
+      <p>移除施法者接收队列中所有未读 iota。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/comm/open_transmit">
-<h4 class="pattern-title">Open Transmit (num →)<a
+<h4 class="pattern-title">开始发信 (num →)<a
     href="#patterns/spells/links@hexal:link/comm/open_transmit"
     class="permalink small"
     title="Permalink"
@@ -1909,13 +1909,13 @@
         data-string="qwdedwq"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qwdedwq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwdedwq</canvas>
   </details>
-      <p>Similar to <a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/patterns_as_iotas@hexcasting:open_paren'><span style='color: #fc77be'>Introspection</span></a>, until drawing a <a href='#patterns/spells/links@hexal:link/comm/close_transmit'><span style='color: #fc77be'>Close Transmit</span></a> all patterns I draw are sent along the link whose index is at the top of the stack.</p>
+      <p>与<a href='https://object-object.github.io/HexMod/v/0.10.3#patterns/patterns_as_iotas@hexcasting:open_paren'><span style='color: #fc77be'>内省</span></a>类似。在绘制<a href='#patterns/spells/links@hexal:link/comm/close_transmit'><span style='color: #fc77be'>结束发信</span></a>后，所有我绘制的图案会通过编号为栈顶数的链接发送出去。</p>
   </div>
 <br />
   <div id="patterns/spells/links@hexal:link/comm/close_transmit">
-<h4 class="pattern-title">Close Transmit<a
+<h4 class="pattern-title">结束发信<a
     href="#patterns/spells/links@hexal:link/comm/close_transmit"
     class="permalink small"
     title="Permalink"
@@ -1929,15 +1929,15 @@
         data-string="ewaqawe"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: ewaqawe</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：ewaqawe</canvas>
   </details>
-      <p>When drawn after <a href='#patterns/spells/links@hexal:link/comm/open_transmit'><span style='color: #fc77be'>Open Transmit</span></a> I stop transmitting drawn patterns. If either <a href='#patterns/spells/links@hexal:link/comm/open_transmit'><span style='color: #fc77be'>Open Transmit</span></a> or <a href='#patterns/spells/links@hexal:link/comm/close_transmit'><span style='color: #fc77be'>Close Transmit</span></a> are executed by an intermediary caster such as a wisp, they will mishap.</p>
+      <p>在<a href='#patterns/spells/links@hexal:link/comm/open_transmit'><span style='color: #fc77be'>开始发信</span></a>之后绘制，意味着发信过程结束。如果<a href='#patterns/spells/links@hexal:link/comm/open_transmit'><span style='color: #fc77be'>开始发信</span></a>或<a href='#patterns/spells/links@hexal:link/comm/close_transmit'><span style='color: #fc77be'>结束发信</span></a>是由中介施法者（如咒灵）运行的话，则会产生事故。</p>
   </div>
 <br />
 </div>
 <div id="patterns/spells/motes">
     <div class="spoilered">
-      <h3 class="entry-title page-header">Motes<a
+      <h3 class="entry-title page-header">物元<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -1946,19 +1946,19 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>This entry deals with bringing items into the media, making them referencable, countable, bringing order to them and to me and to my mind and-. A mediafied item iota (known as a mote) that has been added to the stack references a specific mote record in a Mote Nexus, since without something holding the thought-pattern of the item to this world it will wither away -away like my cognition is flensing-.</p>
+    <p>此条目主要记述如何将物品本身拉进媒质，使其可被引用，可被计数，并将秩序带给它们也带给我也带给我的意识也带给——。压入栈中的媒质化物品 iota（称为“物元”）都代表着物元枢纽中的某个物元记录。这是因为假如没有东西承载物品中的思维模式，物品本身就会消亡——就像我的意识的剥脱——</p>
 <br />
-    <p>Any duplicate of that first mote iota referencing a record references the same record, and any change to one affects them all for they all point to the one and only in the media. Splitting and merging and crafting and trading all affect all affect all-.</p>
+    <p>所有物元 iota 的复制版本都指向同一物元记录，也正因此，对其中一个做出的修改将同步到所有复制版本中去。拆分与合并与合成与交易都影响所有影响所有——</p>
 <br />
-    <p>A Mote Nexus is limited in some ways, but only some. It can contain 1023 different records, but each record can store items innumerable. I have yet to find any limit, I can merge and merge and merge forever and the record keeps growing and growing and growing...</p>
+    <p>物元枢纽也有部分限制，但也只是部分。它最多能存放 1023 条记录，但每条记录中物品的个数则没有上限。我还没发现任何能证明上限存在的证据，我能合并再合并再合并再合并直到永远记录增长然后增长然后增……</p>
 <br />
     <blockquote class="crafting-info">
-    Depicted in the book: A mind-flaying recipe producing the <code>Mote Nexus</code>.
+    书中显示如下事物的意识剥离配方： <code>物元枢纽</code>.
   </blockquote>
-  <p>The Mote Nexus is built from the mind of a cartographer endlessly mapping the contents of the <span style='color: #b0b'>Shulker Box</span> that it has been flayed into.</p>
+  <p>物元枢纽是用制图师的意识制成的，它会永不中断地标记和映射对应<span style='color: #b0b'>潜影盒</span>中的物品。</p>
 <br />
   <div id="patterns/spells/motes@hexal:mote/storage/bind">
-<h4 class="pattern-title">Bind Storage (vec →)<a
+<h4 class="pattern-title">绑定储库 (vec →)<a
     href="#patterns/spells/motes@hexal:mote/storage/bind"
     class="permalink small"
     title="Permalink"
@@ -1972,13 +1972,13 @@
         data-string="qaqwqaqwqaq"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaqwqaqwqaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaqwqaqwqaq</canvas>
   </details>
-      <p>Target a Mote Nexus block in the world and bind yourself to it, meaning all items you mediafy will be added to that nexus&#39; capacity. Targeting any other block will unbind you from your currently bound nexus. Costs 32 <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>锚定一个物元枢纽，并将自身与其绑定，所有我媒质化的物品都会存入该枢纽。若锚定至其他枢纽则会自动解开与原枢纽的绑定。消耗 32 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/storage/bind/temp">
-<h4 class="pattern-title">Bind Storage - Temp. (vec →)<a
+<h4 class="pattern-title">绑定储库，临时型 (vec →)<a
     href="#patterns/spells/motes@hexal:mote/storage/bind/temp"
     class="permalink small"
     title="Permalink"
@@ -1992,13 +1992,13 @@
         data-string="edewedewede"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edewedewede</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edewedewede</canvas>
   </details>
-      <p>Target a Mote Nexus block in the world and bind to it for the remainder of this cast, temporarily overriding your primary binding. Costs one thousandth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>锚定一个物元枢纽，在当前咒术结束前将自身与其绑定。其在本咒术内会暂时覆盖永久性绑定的枢纽。消耗 1/1000 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/contained_type/get">
-<h4 class="pattern-title">Stocktake Reflection (→ [itemtype])<a
+<h4 class="pattern-title">盘货之精思 (→ [itemtype])<a
     href="#patterns/spells/motes@hexal:mote/contained_type/get"
     class="permalink small"
     title="Permalink"
@@ -2012,13 +2012,13 @@
         data-string="dwqqqqqwddww"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dwqqqqqwddww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dwqqqqqwddww</canvas>
   </details>
-      <p>Gets all the types of motes contained in the currently bound Mote Nexus.</p>
+      <p>获取当前绑定的枢纽中所有物元的类型。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/contained/get">
-<h4 class="pattern-title">Stocktake Purification (mote | itemtype → [mote])<a
+<h4 class="pattern-title">盘货之纯化 (mote | itemtype → [mote])<a
     href="#patterns/spells/motes@hexal:mote/contained/get"
     class="permalink small"
     title="Permalink"
@@ -2032,13 +2032,13 @@
         data-string="aweeeeewaaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aweeeeewaaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aweeeeewaaww</canvas>
   </details>
-      <p>Gets all the mote records from the currently bound Mote Nexus that match the passed item type or could be combined with the passed mote.</p>
+      <p>获取当前绑定的枢纽中所有和所给物品类型对应的，或所有可与所给物元合并的物元。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/storage/remaining_capacity/get">
-<h4 class="pattern-title">Capacity Reflection (→ int)<a
+<h4 class="pattern-title">容量之精思 (→ int)<a
     href="#patterns/spells/motes@hexal:mote/storage/remaining_capacity/get"
     class="permalink small"
     title="Permalink"
@@ -2052,13 +2052,13 @@
         data-string="awedqdewa"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awedqdewa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awedqdewa</canvas>
   </details>
-      <p>Gets the remaining capacity of the bound Mote Nexus.</p>
+      <p>获取所绑定的枢纽剩余的空间。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/storage/contains">
-<h4 class="pattern-title">Containment Distillation (vec, (itemtype | mote) → bool)<a
+<h4 class="pattern-title">容纳之馏化 (vec, (itemtype | mote) → bool)<a
     href="#patterns/spells/motes@hexal:mote/storage/contains"
     class="permalink small"
     title="Permalink"
@@ -2072,13 +2072,13 @@
         data-string="dwqaeaqwd"
         data-start="north_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dwqaeaqwd</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dwqaeaqwd</canvas>
   </details>
-      <p>Returns true if the Mote Nexus at the given position contains a mote of the given type, or that would stack with the given mote, and false otherwise.</p>
+      <p>若所给位置的物元枢纽中包含所给类型的物元，或包含可与所给物元合并的物元，则返回 True，否则返回 False。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/make">
-<h4 class="pattern-title">Mediafy Item (item | item, mote → mote)<a
+<h4 class="pattern-title">媒质化物品 (item | item, mote → mote)<a
     href="#patterns/spells/motes@hexal:mote/make"
     class="permalink small"
     title="Permalink"
@@ -2092,13 +2092,13 @@
         data-string="eaqa"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eaqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eaqa</canvas>
   </details>
-      <p>Convert an item in the world (either an item entity or an item frame) into a mote on your stack. If passed an existing mote instead adds the items from the entity to the mote. Mediafying an item costs a tenth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>将世界中的物品（物品实体、物品展示框）转换为物元。若传入物元，则会将所给物体与该物元合并。媒质化 1 份物品消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/return">
-<h4 class="pattern-title">Return Item (mote, vec | mote, vec, num →)<a
+<h4 class="pattern-title">返还物品 (mote, vec | mote, vec, num →)<a
     href="#patterns/spells/motes@hexal:mote/return"
     class="permalink small"
     title="Permalink"
@@ -2112,13 +2112,13 @@
         data-string="qded"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qded</canvas>
   </details>
-      <p>Returns all the items from a mote to the world at the location of your choosing. If passed a number returns at most that many items. Costs a tenth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>将物元中所有物品返还到所给位置处。若传入数，则最多返还该数个物品。消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/count/get">
-<h4 class="pattern-title">Weighing Purification (mote → int)<a
+<h4 class="pattern-title">衡数之纯化 (mote → int)<a
     href="#patterns/spells/motes@hexal:mote/count/get"
     class="permalink small"
     title="Permalink"
@@ -2132,13 +2132,13 @@
         data-string="qqqqwqqqqqaa"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqwqqqqqaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqwqqqqqaa</canvas>
   </details>
-      <p>Accepts a mote and returns the number of items in the record referenced by that mote.</p>
+      <p>接受物元，并返回该物元对应的记录中物品的个数。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/combine">
-<h4 class="pattern-title">Stacking Distillation (mote, mote → mote)<a
+<h4 class="pattern-title">堆叠之馏化 (mote, mote → mote)<a
     href="#patterns/spells/motes@hexal:mote/combine"
     class="permalink small"
     title="Permalink"
@@ -2152,13 +2152,13 @@
         data-string="aqaeqded"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: aqaeqded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqaeqded</canvas>
   </details>
-      <p>Combines two motes into one, merging the mote records they point to. Any pointers to the second mote will become null, any pointers to the first will remain. This can make motes holding many more items than I could carry in a stack naturally!</p>
+      <p>将两个物元合并，也同时合并两者所指向的物元记录。指向第二条记录的物元会变为 Null，指向第一条的物元不会。如此就能在栈中放下远超我随身携带量的物品了！</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/combinable">
-<h4 class="pattern-title">Stacking Distillation II (mote, (mote | item) → bool)<a
+<h4 class="pattern-title">堆叠之馏化，第二型 (mote, (mote | item) → bool)<a
     href="#patterns/spells/motes@hexal:mote/combinable"
     class="permalink small"
     title="Permalink"
@@ -2172,13 +2172,13 @@
         data-string="dedqeaqa"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: dedqeaqa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：dedqeaqa</canvas>
   </details>
-      <p>Returns true if the first mote can be combined with the items in the second argument (which can be a mote, item entity, or item frame), and false otherwise.</p>
+      <p>若第一参数物元可与第二参数（物元、物品实体、物品展示框）中物品合并，返回 True，否则返回 False。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/split">
-<h4 class="pattern-title">Splitting Gambit (mote, int → mote, mote)<a
+<h4 class="pattern-title">拆分之策略 (mote, int → mote, mote)<a
     href="#patterns/spells/motes@hexal:mote/split"
     class="permalink small"
     title="Permalink"
@@ -2192,13 +2192,13 @@
         data-string="eaqaaw"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eaqaaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eaqaaw</canvas>
   </details>
-      <p>Splits the specified number of items off of the passed mote, creating a new mote pointing to a new mote record.</p>
+      <p>从所给物元中拆分出所给数个物品，以此创建一条物元记录并返回对应物元 iota。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/storage/get">
-<h4 class="pattern-title">Depot Purification (mote → vec)<a
+<h4 class="pattern-title">货场之纯化 (mote → vec)<a
     href="#patterns/spells/motes@hexal:mote/storage/get"
     class="permalink small"
     title="Permalink"
@@ -2212,13 +2212,13 @@
         data-string="qqqqqaw"
         data-start="south_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqqqaw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqqqaw</canvas>
   </details>
-      <p>Get the position of the Mote Nexus that contains the passed mote.</p>
+      <p>获取存储所给物元的枢纽的位置。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/storage/set">
-<h4 class="pattern-title">Depot Gambit (mote, vec → mote)<a
+<h4 class="pattern-title">货场之策略 (mote, vec → mote)<a
     href="#patterns/spells/motes@hexal:mote/storage/set"
     class="permalink small"
     title="Permalink"
@@ -2232,13 +2232,13 @@
         data-string="eeeeedw"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: eeeeedw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：eeeeedw</canvas>
   </details>
-      <p>Move the record referenced by the passed mote to the Mote Nexus at the passed position. This returns a new mote pointing to that record, and invalidates all previous motes pointing to that record.</p>
+      <p>将所给物元对应的记录转移到所给位置处的物元枢纽中，并会返回指向新记录的物元 iota，且所有指向原记录的物元均会失效。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/craft">
-<h4 class="pattern-title">Craft (mote | [mote] | [[mote]] → [mote])<a
+<h4 class="pattern-title">合成 (mote | [mote] | [[mote]] → [mote])<a
     href="#patterns/spells/motes@hexal:mote/craft"
     class="permalink small"
     title="Permalink"
@@ -2252,15 +2252,15 @@
         data-string="wwawdedwawdewwdwaqawdwwedwawdedwaww"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: wwawdedwawdewwdwaqawdwwedwawdedwaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wwawdedwawdewwdwaqawdwwedwawdedwaww</canvas>
   </details>
-      <p>Takes a mote, list of motes, or list of list of motes. returns a list containing the results of crafting with those items. For example, the input Stone x128 would return [Stone Button x128].</p>
+      <p>接受物元，物元组成的列表，或物元列表组成的列表。并返回包含以对应物品合成所得产物的列表。例如，输入“石头 x128”会返回 [石头按钮 x128]。</p>
   </div>
 <br />
-    <p>For more complex crafts, inserting nulls to space items properly will be required. A diamond pickaxe for example would require [[Diamond x2, Diamond x2, Diamond x2], [null, Stick x2], [null, Stick x2]] to get [Diamond Pickaxe x2]. Costs a tenth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+    <p>更为复杂的合成表则需要在对应位置插入 Null。例如合成钻石镐，会需要 [[钻石 x2, 钻石 x2, 钻石 x2], [Null, 木棍 x2], [Null, 木棍 x2]]，并返回 [钻石镐 x2]。消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
 <br />
   <div id="patterns/spells/motes@hexal:mote/villager/level/get">
-<h4 class="pattern-title">Seniority Purification (villager → int)<a
+<h4 class="pattern-title">资历之纯化 (villager → int)<a
     href="#patterns/spells/motes@hexal:mote/villager/level/get"
     class="permalink small"
     title="Permalink"
@@ -2274,13 +2274,13 @@
         data-string="qqwdedwqqaww"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqwdedwqqaww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqwdedwqqaww</canvas>
   </details>
-      <p>Accepts a villager, returns a number representing that villager&#39;s seniority and skill at their craft.</p>
+      <p>接受代表村民的 iota，并返回代表该村民在其职业上熟练度的数。</p>
   </div>
 <br />
   <div id="patterns/spells/motes@hexal:mote/trade/get">
-<h4 class="pattern-title">Offering Purification (villager → [complicated!])<a
+<h4 class="pattern-title">报价之纯化 (villager → [complicated!])<a
     href="#patterns/spells/motes@hexal:mote/trade/get"
     class="permalink small"
     title="Permalink"
@@ -2294,15 +2294,15 @@
         data-string="awdedwaawwqded"
         data-start="south_east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awdedwaawwqded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awdedwaawwqded</canvas>
   </details>
-      <p>Accepts a villager and returns all of the trades that villager is offering. This is a list of lists of lists. Each trade comprises two lists, the cost, and the returned items. The returned items is a list containing the type of item, and the number of items.</p>
+      <p>接受代表村民的 iota，并返回该村民所有的交易选项，返回结果是列表的列表的列表。每项交易由两个列表组成，内容分别为给出的物品和换得的物品。换得物品列表由对应的物品类型和可换得物品的数量组成。</p>
   </div>
 <br />
-    <p>The cost is a list of one or two pairs of item and number of items required by the villager for the trade to be accepted. For example, one trade offer could be [[[Emerald, 1]], [Redstone, 1]].</p>
+    <p>给出物品列表则由一对或两对物品类型与对应数量组成。例如，一项交易可能形如 [[[绿宝石, 1]], [红石粉, 1]]。</p>
 <br />
   <div id="patterns/spells/motes@hexal:mote/trade">
-<h4 class="pattern-title">Trade (villager, [mote], int? → item)<a
+<h4 class="pattern-title">交易 (villager, [mote], int? → item)<a
     href="#patterns/spells/motes@hexal:mote/trade"
     class="permalink small"
     title="Permalink"
@@ -2316,17 +2316,17 @@
         data-string="awdedwaeqded"
         data-start="north_west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: awdedwaeqded</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：awdedwaeqded</canvas>
   </details>
-      <p>Accepts a villager, a list of motes to trade with to villager, and optionally an int for which of that villager&#39;s trades to attempt. (int? above means that you can pass 2 or 3 arguments, the optional 3rd being an int).</p>
+      <p>接受代表村民的 iota，由物元组成的列表（用于交易），和代表交易次序的整数（可选）。（上方的 int? 表示可传入 2 或 3 个参数，可选的第三个参数需为整数。）</p>
   </div>
 <br />
-    <p>If no trade number was passed, it will try each of the villager&#39;s trade until finding one that accepts the passed items. If a trade number was passed it will skip straight to using that trade. It will then repeat that trade for as long as it has enough items and the villager is still willing to trade. It will then return the items the villager traded away as a mote to the stack.</p>
+    <p>若不输入次序数，则会依次寻找交易选项，直到找到接受所给物品的选项为止。若输入，则会直接跳转至该交易选项处。这之后便会一直进行交易，直到物品耗尽或是村民停用该项为止。交易结束后会返回由所获得的物品组成的物元。</p>
 <br />
-    <p>The villager will find this trade to be a learnable experience as it would if trading with you directly, and will improve its skills and trade offerings commensurately. Costs a tenth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+    <p>村民会将这些交易视作直接与我进行，且会获得经验，并以此精进技艺并改进交易选项。消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
 <br />
   <div id="patterns/spells/motes@hexal:mote/use_on">
-<h4 class="pattern-title">Use Item On (mote, (entity | vec, vec) →)<a
+<h4 class="pattern-title">使用物品 (mote, (entity | vec, vec) →)<a
     href="#patterns/spells/motes@hexal:mote/use_on"
     class="permalink small"
     title="Permalink"
@@ -2340,16 +2340,16 @@
         data-string="qqqwqqqqaa"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqwqqqqaa</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqwqqqqaa</canvas>
   </details>
-      <p>Accepts a mote, and either an entity, or a target block and a normal vector. Uses the item on the entity/block. The mote must either only have one item in it, or the items contained must be extremely simple (no NBT data).</p>
+      <p>接受一个物元和一个实体或位置向量和法向量。并对实体或所给位置处方块使用物元中物品。物元本身需只能含有一个物品，或其中物品极为简单（无 NBT 数据）。</p>
   </div>
 <br />
     </div>
 </div>
 </section>
 <section id="patterns/great_spells">
-    <h2 class="category-title page-header">Great Spells<a
+    <h2 class="category-title page-header">hexcasting.entry.great_spells<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -2358,9 +2358,9 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h2>
-    <p>The spells catalogued here are purported to be of legendary difficulty and power. They seem to have been recorded only sparsely (for good reason, the texts claim). It&#39;s probably just the hogwash of extinct traditionalists, though-- a pattern&#39;s a pattern. What could possibly go wrong?</p>
+    <p>hexcasting.entry.great_spells.desc</p>
 <div id="patterns/great_spells/tick">
-    <h3 class="entry-title page-header">Accelerate<a
+    <h3 class="entry-title page-header">加速<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -2370,7 +2370,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/great_spells/tick@hexal:tick">
-<h4 class="pattern-title">Accelerate (vec →)<a
+<h4 class="pattern-title">加速 (vec →)<a
     href="#patterns/great_spells/tick@hexal:tick"
     class="permalink small"
     title="Permalink"
@@ -2384,16 +2384,16 @@
         data-string="wwwdwdwwwawqqeqwqqwqeqwqq"
         data-start="south_east"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: wwwdwdwwwawqqeqwqqwqeqwqq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wwwdwdwwwawqqeqwqqwqeqwqq</canvas>
   </details>
-      <p>Causes the block at the passed vector to perform its normal actions faster in the instant that this spell is cast.</p>
+      <p>在法术运行的那一刻，加速所给位置处方块的运作。</p>
   </div>
 <br />
-    <p>Casting it costs a tenth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>, plus a thousandth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> for each time it has previously been cast on that block in this hex.</p>
+    <p>施放此法术要消耗 1/10 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>，在整个咒术内，每对同一方块加速一次，额外消耗 1/1000 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
 <br />
 </div>
 <div id="patterns/great_spells/great_wisps">
-    <h3 class="entry-title page-header">Great Wisp Spells<a
+    <h3 class="entry-title page-header">卓越咒灵法术<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -2403,7 +2403,7 @@
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
   <div id="patterns/great_spells/great_wisps@hexal:wisp/consume">
-<h4 class="pattern-title">Consume Wisp (entity →)<a
+<h4 class="pattern-title">拆解咒灵 (entity →)<a
     href="#patterns/great_spells/great_wisps@hexal:wisp/consume"
     class="permalink small"
     title="Permalink"
@@ -2417,15 +2417,15 @@
         data-string="wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww"
         data-start="north_west"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：wawqwawwwewwwewwwawqwawwwewwwewdeaweewaqaweewaawwww</canvas>
   </details>
-      <p>Remove a wisp from the stack, and disassemble the wisp. The patterns contained are lost, but the media that it contained can be repurposed if this spell is cast by another wisp.</p>
+      <p>移除栈顶咒灵实体，并拆解该咒灵。咒灵携带的图案不可追回，但是如果此法术是由其他咒灵施放的，那么被拆解咒灵所剩的媒质还可再加利用。</p>
   </div>
 <br />
-    <p>Costs either an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Shard</span></a> if the wisp is owned by you or has <a href='#patterns/spells/wisps@hexal:wisp/transfer/allow'>allowed<span style='color: #fc77be'> transfer with the caster or caster&#39;s owner, or half again as much media as the consumed wisp contains if the wisp is owned by another and has now allowed it. Repurposing the media is not completely efficient, losing one twentieth of the consumed wisp&#39;s reserve in transfer.</span></a></p>
+    <p>若咒灵的所有者是我，消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>；若咒灵的所有者是他人，则消耗该咒灵所拥有的媒质量的一半。媒质的再利用效率不算特别高，会在传输过程中损耗掉被拆解咒灵媒质池容量的 1/20。</p>
 <br />
   <div id="patterns/great_spells/great_wisps@hexal:wisp/seon/set">
-<h4 class="pattern-title">Bind Wisp (entity →)<a
+<h4 class="pattern-title">绑定咒灵 (entity →)<a
     href="#patterns/great_spells/great_wisps@hexal:wisp/seon/set"
     class="permalink small"
     title="Permalink"
@@ -2439,13 +2439,13 @@
         data-string="aqweewqaeaqweewqaqwww"
         data-start="south_west"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: aqweewqaeaqweewqaqwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：aqweewqaeaqweewqaqwww</canvas>
   </details>
-      <p>Bind one of my wisps closer to me; I may only have one bound wisp at a time, but whichever wisp is bound costs significantly less upkeep and increased range.</p>
+      <p>在我的咒灵和我之间建立更紧密的联系。我只能同时绑定一个咒灵，但绑定咒灵的常态消耗将大大减少。</p>
   </div>
 <br />
   <div id="patterns/great_spells/great_wisps@hexal:wisp/seon/get">
-<h4 class="pattern-title">Familiar&#39;s Reflection (→ entity | null)<a
+<h4 class="pattern-title">密友之精思 (→ entity | null)<a
     href="#patterns/great_spells/great_wisps@hexal:wisp/seon/get"
     class="permalink small"
     title="Permalink"
@@ -2459,14 +2459,14 @@
         data-string="daqweewqaeaqweewqaqwwww"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: daqweewqaeaqweewqaqwwww</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：daqweewqaeaqweewqaqwwww</canvas>
   </details>
-      <p>Returns my currently bound wisp. A new wisp can only be bound when this returns null. (This is not a great spell, I have simply placed it here for convenience.)</p>
+      <p>返回我当前绑定的咒灵。（这并不是卓越法术，记载于此是为了方便查找。）</p>
   </div>
 <br />
 </div>
 <div id="patterns/great_spells/gates">
-    <h3 class="entry-title page-header">Gates<a
+    <h3 class="entry-title page-header">门径<a
     href="#table-of-contents"
     class="permalink small"
     title="Jump to top"
@@ -2475,14 +2475,14 @@
     class="permalink small"
     title="Permalink"
   ><i class="bi bi-link-45deg"></i></a></h3>
-    <p>Gates are the latest in my long line of experimentation with breaking space to connect distant points and allow instantaneous travel. What gates allow me to do, that none of my previous attempts have succeeded at, is to do it <i>efficiently</i>. There are three varieties of gates that I have learned how to construct, all of which take a large amount of media to burn into reality, but are significantly cheaper to operate afterwards.</p>
+    <p>门径是我有关空间远距连接和瞬间移动的长时间研究的最新成果。与我之前的试验不同的是，它能<i>极为高效地</i>完成传送任务。我已学会构造三种不同的门径，所有三种都需要巨量的媒质才能烧入现实，但后续的操作则相较之下极为便宜。</p>
 <br />
-    <p>Location Anchored Gates are bound to a specific position in the world, and send all that move through them to that position. Entity Anchored Gates are bound to a being that inhabits the world, and send those moving through them to the position of that being (plus an offset, chosen when burning in the gate).</p>
+    <p>位置锚定门径与世界上某一位置绑定，会将所有穿过它们的事物送至该位置。实体锚定门径则与世界上某一实体绑定，会将所有穿过它们的事物送至该实体处（可附带一个偏移向量，需在烧入门径时提供）。</p>
 <br />
-    <p>Drifting Gates are not bound at all, and can be used to send entities anywhere, however they lose efficiency as a result, and can only send entities to places that are in my ambit. When a gate is burnt in I will obtain on my stack a reference to that gate. With that gate reference, I can mark entities with that gate, and I can close the gate, which sends all entities marked with that gate to the gate&#39;s destination. Note that closing a gate doesn&#39;t use it up; once I have acquired a gate iota I can use it in perpetuity.</p>
+    <p>未锚定门径没有与任何事物绑定，可用于将实体送至任意位置。但其效率也会相应降低，只能将实体送至我所能影响的范围内的位置。门径烧入成功后，我的栈上便会出现一个代表其的 iota。我能以此 iota 标记实体，如此当我关闭门径时，所有被标记的实体就会被传送至门径终点。需注意关闭门径不会将其消耗，获得门径 iota 后便能永久使用。</p>
 <br />
   <div id="patterns/great_spells/gates@hexal:gate/make">
-<h4 class="pattern-title">Gate&#39;s Reflection (null | vec | vec, entity → gate)<a
+<h4 class="pattern-title">门径之精思 (null | vec | vec, entity → gate)<a
     href="#patterns/great_spells/gates@hexal:gate/make"
     class="permalink small"
     title="Permalink"
@@ -2496,13 +2496,13 @@
         data-string="qwqwqwqwqwqqeaeaeaeaeae"
         data-start="west"
         data-per-world="True"
-      >Your browser does not support visualizing patterns. Pattern code: qwqwqwqwqwqqeaeaeaeaeae</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qwqwqwqwqwqqeaeaeaeaeae</canvas>
   </details>
-      <p>Adds a new gate iota to the stack. Any copy of this iota will point to the same numbered gate. Costs 32 <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Charged Amethyst</span></a>. If passed null, makes a Drifting Gate. If passed a vector, makes a Location Anchored Gate, If passed a vector and an entity, makes an Entity Anchored Gate.</p>
+      <p>压入一个新的门径。所有此 iota 的复制品都指向同一个门径。消耗 32 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>充能紫水晶</span></a>。若传入 Null，则构造未锚定门径；若传入一个向量，则构造位置锚定门径；若传入一个向量和一个实体，则构造实体锚定门径。</p>
   </div>
 <br />
   <div id="patterns/great_spells/gates@hexal:gate/mark">
-<h4 class="pattern-title">Gate&#39;s Opening (gate, entity →)<a
+<h4 class="pattern-title">开启门径 (gate, entity →)<a
     href="#patterns/great_spells/gates@hexal:gate/mark"
     class="permalink small"
     title="Permalink"
@@ -2516,13 +2516,13 @@
         data-string="qaqeede"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qaqeede</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qaqeede</canvas>
   </details>
-      <p>Consumes a gate iota and an entity. Marks that entity to be teleported the next time that gate is closed. Costs one twentieth of an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a>.</p>
+      <p>移除栈顶实体与门径，并标记该实体，被标记的实体会在对应门径关闭时被传送。消耗 1/20 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
   <div id="patterns/great_spells/gates@hexal:gate/unmark">
-<h4 class="pattern-title">Gate&#39;s Dismissal (gate, entity →)<a
+<h4 class="pattern-title">解除门径 (gate, entity →)<a
     href="#patterns/great_spells/gates@hexal:gate/unmark"
     class="permalink small"
     title="Permalink"
@@ -2536,13 +2536,13 @@
         data-string="edeqqaq"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edeqqaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edeqqaq</canvas>
   </details>
-      <p>Consumes a gate iota and an entity. Unmarks that entity so that if it was marked with <a href='#patterns/great_spells/gates@hexal:gate/mark'><span style='color: #fc77be'> Gate&#39;s Opening</span></a> it will no longer be teleported the next time that gate is closed.</p>
+      <p>移除栈顶门径与实体，并取消该实体的标记。若其已被<a href='#patterns/great_spells/gates@hexal:gate/mark'><span style='color: #fc77be'>开启门径</span></a>标记，下一次门径关闭时其将不会被传送。</p>
   </div>
 <br />
   <div id="patterns/great_spells/gates@hexal:gate/mark/num/get">
-<h4 class="pattern-title">Marked Purification (gate → num)<a
+<h4 class="pattern-title">标径之纯化 (gate → num)<a
     href="#patterns/great_spells/gates@hexal:gate/mark/num/get"
     class="permalink small"
     title="Permalink"
@@ -2556,13 +2556,13 @@
         data-string="qawwaqqqaq"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qawwaqqqaq</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qawwaqqqaq</canvas>
   </details>
-      <p>Consumes a gate iota, returns how many entities are marked by that gate.</p>
+      <p>移除栈顶门径，返回被该门径标记的实体的数量。</p>
   </div>
 <br />
   <div id="patterns/great_spells/gates@hexal:gate/mark/get">
-<h4 class="pattern-title">Marked Distillation (gate, entity → bool)<a
+<h4 class="pattern-title">标径之馏化 (gate, entity → bool)<a
     href="#patterns/great_spells/gates@hexal:gate/mark/get"
     class="permalink small"
     title="Permalink"
@@ -2576,13 +2576,13 @@
         data-string="edwwdeeede"
         data-start="east"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: edwwdeeede</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：edwwdeeede</canvas>
   </details>
-      <p>Consumes a gate iota and an entity, returns whether that entity is marked by that gate.</p>
+      <p>移除栈顶门径和实体，判断该实体是否被该门径标记。</p>
   </div>
 <br />
   <div id="patterns/great_spells/gates@hexal:gate/close">
-<h4 class="pattern-title">Gate&#39;s Closing (gate | gate, vec →)<a
+<h4 class="pattern-title">关闭门径 (gate | gate, vec →)<a
     href="#patterns/great_spells/gates@hexal:gate/close"
     class="permalink small"
     title="Permalink"
@@ -2596,9 +2596,9 @@
         data-string="qqqwwqqqwqqawdedw"
         data-start="west"
         data-per-world="False"
-      >Your browser does not support visualizing patterns. Pattern code: qqqwwqqqwqqawdedw</canvas>
+      >浏览器不支持图案的可视化。图案代码见此：qqqwwqqqwqqawdedw</canvas>
   </details>
-      <p>Consumes a non-drifing gate iota, or a drifting gate iota and a position. Transports all the entities marked with the passed gate to the stored or given position, as relevant. Costs half an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Shard</span></a>, plus an <a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>Amethyst Dust</span></a> per metre transported per entity, if the gate was drifting.</p>
+      <p>移除栈顶锚定门径，或未锚定门径与位置向量。将所有被所给门径标记的实体传送至其锚定位置或所给位置。消耗 1/2 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶碎片</span></a>。若为未锚定门径，则每个实体每传送 1 格额外消耗 1 个<a href='https://object-object.github.io/HexMod/v/0.10.3#items/amethyst'><span style='color: #b0b'>紫水晶粉</span></a>。</p>
   </div>
 <br />
 </div>
