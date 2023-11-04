@@ -1,6 +1,5 @@
 modid = "hexal"
 book = "hexal:hexalbook"
-fallback_url = "https://talia-12.github.io/Hexal"
 default_lang = "en_us"
 
 _export_root = "../../doc/src/hexdoc_hexal/_export"
@@ -29,17 +28,12 @@ regex = "{^_pattern_regex}"
 path = "{^_fabric.package}/FabricHexalInitializer.kt"
 regex = "{^_pattern_regex}"
 
-
-[base_asset_urls]
-hexcasting = "https://raw.githubusercontent.com/gamma-delta/HexMod/main/Common/src/main/resources"
-
-
 [template]
-main = "main.html.jinja"
 static_dir = "static"
-packages = [
-    "hexdoc_hexal",
-    "hexdoc",
+include = [
+    "hexal",
+    "hexcasting",
+    "patchouli",
 ]
 
 [template.args]
