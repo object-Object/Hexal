@@ -132,7 +132,7 @@ function doCycleTexturesForever() {
 }
 // these are filled by Jinja
 const BOOK_URL = "https://object-object.github.io/Hexal";
-const VERSION = "0.3.0-2";
+const VERSION = "0.2.18";
 const LANG = "zh_cn";
 // Creates an element in the form `<li><a href=${href}>${text}</a></li>`
 function dropdownItem(text, href) {
