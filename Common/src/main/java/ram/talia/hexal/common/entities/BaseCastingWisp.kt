@@ -4,6 +4,7 @@ import at.petrak.hexcasting.api.misc.FrozenColorizer
 import at.petrak.hexcasting.api.spell.iota.EntityIota
 import at.petrak.hexcasting.api.spell.iota.Iota
 import at.petrak.hexcasting.api.spell.iota.ListIota
+import at.petrak.hexcasting.api.spell.iota.NullIota
 import at.petrak.hexcasting.api.utils.asCompound
 import at.petrak.hexcasting.api.utils.getList
 import at.petrak.hexcasting.api.utils.hasByte
@@ -71,17 +72,26 @@ abstract class BaseCastingWisp(entityType: EntityType<out BaseCastingWisp>, worl
 
 	override val isConsumable = true
 
+	protected var serRavenmind: SerialisedIota = SerialisedIota()
+	open fun setRavenmind(iota: Iota?) {
+		serRavenmind.set(iota ?: NullIota())
+	}
+
 	var seon: Boolean
 		get() = entityData.get(SEON)
 		set(value) = entityData.set(SEON, value)
 
 	override fun fightConsume(consumer: Either<BaseCastingWisp, ServerPlayer>): Boolean = consumer.map({ wisp ->
+		blackListContains(wisp) || wisp.caster?.let { blackListContains(IXplatAbstractions.INSTANCE.getLinkstore(it as ServerPlayer)) } ?: false ||
 		wisp.caster != this.caster &&
-		!whiteListTransferMedia.contains(wisp) &&
-		(wisp.caster?.let { !whiteListTransferMedia.contains(IXplatAbstractions.INSTANCE.getLinkstore(it as ServerPlayer)) } ?: true)
+			(
+				!whiteListContains(wisp) ||
+				(wisp.caster?.let { !whiteListContains(IXplatAbstractions.INSTANCE.getLinkstore(it as ServerPlayer)) } ?: false)
+			)
 	}, {
+		blackListContains(IXplatAbstractions.INSTANCE.getLinkstore(it)) ||
 		it != this.caster &&
-		!whiteListTransferMedia.contains(IXplatAbstractions.INSTANCE.getLinkstore(it))
+		!whiteListContains(IXplatAbstractions.INSTANCE.getLinkstore(it))
 	})
 
 	val serHex: SerialisedIotaList = SerialisedIotaList()
@@ -110,6 +120,9 @@ abstract class BaseCastingWisp(entityType: EntityType<out BaseCastingWisp>, worl
 		this.media = media
 	}
 
+	init {
+	    serRavenmind.set(NullIota())
+	}
 
 	override fun tick() {
 		super.tick()
@@ -118,6 +131,7 @@ abstract class BaseCastingWisp(entityType: EntityType<out BaseCastingWisp>, worl
 		// to prevent any memory leak type errors
 		if (!level.isClientSide && (tickCount % 20 == 0)) {
 			serHex.refreshIotas(level as ServerLevel)
+			serRavenmind.refreshIota(level as ServerLevel)
 			tryLoadTransferMediaFilters()
 		}
 
@@ -375,6 +389,11 @@ abstract class BaseCastingWisp(entityType: EntityType<out BaseCastingWisp>, worl
 //			HexalAPI.LOGGER.info("loading wisp $uuid's casterUUID as $casterUUID")
 		}
 
+		when (val ravenmindTag = compound.get(TAG_RAVENMIND)) {
+			null -> serRavenmind.set(NullIota())
+			else -> serRavenmind.set(ravenmindTag as CompoundTag)
+		}
+
 		when (val hexTag = compound.get(TAG_HEX)) {
 			null -> serHex.set(mutableListOf())
 			else -> serHex.set(hexTag as ListTag)
@@ -401,6 +420,7 @@ abstract class BaseCastingWisp(entityType: EntityType<out BaseCastingWisp>, worl
 
 //		HexalAPI.LOGGER.info("saving wisp $uuid's hex as $hexTag")
 		compound.put(TAG_HEX, serHex.getTag())
+		compound.put(TAG_RAVENMIND, serRavenmind.getTag())
 		if (activeTrigger != null)
 			compound.put(TAG_ACTIVE_TRIGGER, WispTriggerRegistry.wrapNbt(activeTrigger!!))
 		compound.putBoolean(TAG_SEON, seon)
@@ -440,6 +460,7 @@ abstract class BaseCastingWisp(entityType: EntityType<out BaseCastingWisp>, worl
 
 		const val TAG_CASTER = "caster"
 		const val TAG_HEX = "hex"
+		const val TAG_RAVENMIND = "ravenmind"
 		const val TAG_ACTIVE_TRIGGER = "active_trigger"
 		const val TAG_SEON = "seon"
 		const val TAG_BLACKLIST_MEDIA_TRANSFER = "blacklist_media_transfer"
