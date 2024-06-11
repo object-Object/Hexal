@@ -12,6 +12,7 @@ import net.minecraft.network.chat.Component
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.InteractionHand
+import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.level.GameType
 import net.minecraft.world.phys.Vec3
@@ -19,11 +20,12 @@ import ram.talia.hexal.common.entities.BaseCastingWisp
 import java.util.function.Predicate
 
 class WispCastEnv(val wisp: BaseCastingWisp, level: ServerLevel) : CastingEnvironment(level) {
-    override fun getCaster(): ServerPlayer? = wisp.caster as? ServerPlayer
+    override fun getCastingEntity(): LivingEntity? = wisp.caster
 
     override fun getMishapEnvironment(): MishapEnvironment = WispMishapEnv(wisp, world)
 
     override fun postExecution(result: CastResult) {
+        super.postExecution(result)
         // TODO
     }
 
@@ -37,7 +39,7 @@ class WispCastEnv(val wisp: BaseCastingWisp, level: ServerLevel) : CastingEnviro
     }
 
     override fun isVecInRangeEnvironment(vec: Vec3): Boolean {
-        val caster = caster
+        val caster = castingEntity as? ServerPlayer
         if (caster != null) {
             val sentinel = HexAPI.instance().getSentinel(caster)
             if (sentinel != null && sentinel.extendsRange() && caster.level().dimension() === sentinel.dimension() && vec.distanceToSqr(sentinel.position()) <= PlayerBasedCastEnv.SENTINEL_RADIUS * PlayerBasedCastEnv.SENTINEL_RADIUS) {
@@ -49,7 +51,7 @@ class WispCastEnv(val wisp: BaseCastingWisp, level: ServerLevel) : CastingEnviro
     }
 
     override fun hasEditPermissionsAtEnvironment(pos: BlockPos): Boolean
-        = this.caster?.gameMode?.gameModeForPlayer != GameType.ADVENTURE && this.caster?.let { world.mayInteract(it, pos) } ?: true
+        = caster?.gameMode?.gameModeForPlayer != GameType.ADVENTURE && caster?.let { world.mayInteract(it, pos) } ?: true
 
     override fun getCastingHand(): InteractionHand = InteractionHand.MAIN_HAND
 
@@ -75,6 +77,6 @@ class WispCastEnv(val wisp: BaseCastingWisp, level: ServerLevel) : CastingEnviro
     }
 
     override fun printMessage(message: Component) {
-        caster?.sendSystemMessage(message)
+        (castingEntity as? ServerPlayer)?.sendSystemMessage(message)
     }
 }
