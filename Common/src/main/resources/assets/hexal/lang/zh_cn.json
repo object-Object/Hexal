@@ -64,7 +64,6 @@
   "hexcasting.action.hexal:zone_entity/not_type": "区域之提整：非类型",
 
   "hexcasting.action.hexal:current_tick": "计时员之精思",
-  "hexcasting.action.hexal:remaining_evals": "塔纳托斯之精思",
   "hexcasting.action.hexal:breath": "潜水员之纯化",
   "hexcasting.action.hexal:health": "护士之纯化",
   "hexcasting.action.hexal:armour": "乡绅之纯化",
@@ -183,7 +182,6 @@
 
   "hexal.entry.hexal_basics": "咒法拓展：基础图案",
   "hexal.page.hexal_basics.current_tick": "返回一个数，这个数似乎与自然记录时间的方式有关。如果先绘制一遍此图案，在 1 秒后再绘制一遍，返回的数会增加 20。",
-  "hexal.page.hexal_basics.remaining_evals": "将咒术在结束前还能运行图案的次数压入栈顶。结果会因$(l:patterns/meta#hexcasting:eval)$(action)赫尔墨斯之策略/$和$(l:patterns/meta#hexcasting:for_each)$(action)托特之策略/$而减少。",
   "hexal.page.hexal_basics.breath": "移除栈顶实体，并返回其剩余氧气值（也即距其溺水还有多少氧气值可消耗）。",
   "hexal.page.hexal_basics.health": "移除栈顶实体，并返回其剩余生命值（也即距其死亡还有多少生命值可损失）。",
   "hexal.page.hexal_basics.armour": "移除栈顶实体，并返回其护甲值。",

@@ -64,7 +64,6 @@
   "hexcasting.action.hexal:zone_entity/not_type": "Zone Exaltation: Not-Type",
 
   "hexcasting.action.hexal:current_tick": "Timekeeper's Reflection",
-  "hexcasting.action.hexal:remaining_evals": "Thanatos' Reflection",
   "hexcasting.action.hexal:breath": "Diver's Purification",
   "hexcasting.action.hexal:health": "Nurse's Purification",
   "hexcasting.action.hexal:armour": "Squire's Purification",
@@ -183,7 +182,6 @@
 
   "hexal.entry.hexal_basics": "Hexal Basic Patterns",
   "hexal.page.hexal_basics.current_tick": "Adds a number to the stack which seems to be related to how Nature represents time; If I cast the pattern, then cast the same pattern a second later, the number it adds has increased by 20.",
-  "hexal.page.hexal_basics.remaining_evals": "Adds the number of evaluations a hex is still capable of to the stack. This is reduced by $(l:patterns/meta#hexcasting:eval)$(action)Hermes' Gambit/$ and $(l:patterns/meta#hexcasting:for_each)$(action)Thoth's Gambit/$.",
   "hexal.page.hexal_basics.breath": "Removes a Living entity from the stack and returns how much breath it has left (i.e., how close it is to drowning).",
   "hexal.page.hexal_basics.health": "Removes a Living entity from the stack and returns how much health it has left (i.e., how close it is to dying).",
   "hexal.page.hexal_basics.armour": "Removes a Living entity from the stack and returns how much armour it has.",

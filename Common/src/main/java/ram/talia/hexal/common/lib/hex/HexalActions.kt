@@ -47,8 +47,6 @@ object HexalActions {
 	@JvmField
 	val CURRENT_TICK = make("current_tick", HexPattern.fromAngles("ddwaa", HexDir.NORTH_WEST), OpCurrentTick)
 	@JvmField
-	val REMAINING_EVALS = make("remaining_evals", HexPattern.fromAngles("qqaed", HexDir.SOUTH_EAST), OpRemainingOps)
-	@JvmField
 	val BREATH = make("breath", HexPattern.fromAngles("aqawdwaqawd", HexDir.NORTH_WEST), OpGetBreath)
 	@JvmField
 	val HEALTH = make("health", HexPattern.fromAngles("aqwawqa", HexDir.NORTH_WEST), OpGetHealth)
