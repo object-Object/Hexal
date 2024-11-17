@@ -6,6 +6,7 @@ import at.petrak.hexcasting.api.casting.eval.CastResult
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.eval.MishapEnvironment
 import at.petrak.hexcasting.api.casting.eval.env.PlayerBasedCastEnv
+import at.petrak.hexcasting.api.casting.eval.sideeffects.OperatorSideEffect
 import at.petrak.hexcasting.api.pigment.FrozenPigment
 import net.minecraft.core.BlockPos
 import net.minecraft.network.chat.Component
@@ -26,7 +27,15 @@ class WispCastEnv(val wisp: BaseCastingWisp, level: ServerLevel) : CastingEnviro
 
     override fun postExecution(result: CastResult) {
         super.postExecution(result)
-        // TODO
+
+        val caster = castingEntity as? ServerPlayer
+        if (caster != null) {
+            for (sideEffect in result.sideEffects) {
+                if (sideEffect is OperatorSideEffect.DoMishap) {
+                    sendMishapMsgToPlayer(sideEffect)
+                }
+            }
+        }
     }
 
     override fun mishapSprayPos(): Vec3 = wisp.position()
@@ -78,5 +87,12 @@ class WispCastEnv(val wisp: BaseCastingWisp, level: ServerLevel) : CastingEnviro
 
     override fun printMessage(message: Component) {
         (castingEntity as? ServerPlayer)?.sendSystemMessage(message)
+    }
+
+    private fun sendMishapMsgToPlayer(mishap: OperatorSideEffect.DoMishap) {
+        val msg = mishap.mishap.errorMessageWithName(this, mishap.errorCtx)
+        if (msg != null) {
+            printMessage(msg)
+        }
     }
 }
