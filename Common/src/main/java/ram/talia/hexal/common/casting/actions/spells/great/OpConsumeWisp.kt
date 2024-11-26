@@ -48,7 +48,6 @@ object OpConsumeWisp : SpellAction {
 		override fun cast(env: CastingEnvironment) {
 			if (env is WispCastEnv) {
 				env.wisp.addMedia(19 * consumed.media / 20)
-				consumed.get().discard()
 			} else {
 				val ext = env.getExtension(ExtractMediaHook.KEY)
 				if (ext == null) {
@@ -57,6 +56,7 @@ object OpConsumeWisp : SpellAction {
 					ext.consumedMedia += 19 * consumed.media / 20
 				}
 			}
+			consumed.get().discard()
 		}
 
 		class ExtractMediaHook(var consumedMedia: Long) :
