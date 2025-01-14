@@ -2,13 +2,11 @@ package ram.talia.hexal.interop.patchouli
 
 import at.petrak.hexcasting.api.casting.iota.IotaType
 import at.petrak.hexcasting.api.casting.iota.IotaType.getTypeFromTag
-import at.petrak.hexcasting.api.casting.math.HexCoord
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.api.utils.*
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes
 import at.petrak.hexcasting.common.lib.hex.HexIotaTypes.KEY_DATA
 import at.petrak.hexcasting.interop.patchouli.AbstractPatternComponent
-import com.mojang.datafixers.util.Pair
 import net.minecraft.ChatFormatting
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.Font
@@ -43,13 +41,13 @@ class EverbookPatternComponent : AbstractPatternComponent() {
 		indexNum = pagenum - 1
 	}
 
-	override fun getPatterns(lookup: UnaryOperator<IVariable>): List<Pair<HexPattern, HexCoord>> {
+	override fun getPatterns(lookup: UnaryOperator<IVariable>): List<HexPattern> {
 		val pattern = IClientXplatAbstractions.INSTANCE.getClientEverbookPattern(indexNum) ?: return listOf()
 
 		isMacro = IClientXplatAbstractions.INSTANCE.isClientEverbookMacro(pattern)
 		iota = IClientXplatAbstractions.INSTANCE.getClientEverbookIota(pattern)
 
-		return listOf(Pair(pattern, HexCoord.Origin))
+		return listOf(pattern)
 	}
 
 	override fun onDisplayed(context: IComponentRenderContext) {

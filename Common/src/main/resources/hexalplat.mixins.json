@@ -7,7 +7,6 @@
   "mixins": [
     "MixinCastingVM",
     "MixinHexInterop",
-    "MixinOperatorSideEffectConsumeMana",
     "MixinPlayerAdvancements"
   ],
   "client": [
